@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Main Tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="color-scheme" content="dark">
+        <link rel="canonical" href="https://kadenissilly.com/contact">
+        <link rel="icon" href="/assets/images/favicon.ico">
+        <link rel="shortcut icon" href="/assets/images/favicon.ico">
+        <title>Kaden's Website | Contact</title>
+        <!-- Styling -->
+        <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+        <link rel="stylesheet" href="/styles/style.css">
+        <style>
+            #contact .container {
+                display: flex;
+                gap: 15px;
+            }
+
+            .contact {
+                padding: 10px;
+                display: flex;
+                gap: 8px;
+                align-items: center;
+                box-shadow: 0 0 8px var(--card-bg);
+                transition: all 0.3s ease;
+            }
+
+            .contact:hover {
+                border-color: #ff0000;
+                box-shadow: 0 0 8px #ff0000;
+                transform: scale(1.025)
+            }
+
+            .contact i {
+                font-size: 19px;
+                color: var(--title);
+            }
+
+            .contact p {
+                font-weight: 400;
+                font-size: 19px;
+                color: var(--text);
+            }
+
+            /* Responsive Styles */
+            @media (max-width: 768px) {    
+                #contact .container {
+                    gap: 10px;
+                }
+
+                .contact {
+                    gap: 6px;
+                }
+
+                .contact i {
+                    font-size: 17px;
+                }
+
+                .contact p {
+                    font-size: 17px;
+                }
+            }
+            
+            @media (max-width: 480px) {    
+                #contact .container {
+                    gap: 7px;
+                }
+
+                .contact {
+                    gap: 4px;
+                }
+
+                .contact i {
+                    font-size: 14px;
+                }
+
+                .contact p {
+                    font-size: 14px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Header -->
+        <header>
+            <nav>
+                <a href="/" data-tooltip-bottom="Home"><i class="far fa-house"></i></a>
+                <a href="/projects" data-tooltip-bottom="Projects"><i class="far fa-folder-closed"></i></a>
+                <a href="/contact" data-tooltip-bottom="Contact Me"><i class="fas fa-envelope-open"></i></a>
+            </nav>
+
+            
+            <button id="theme-toggler" data-tooltip-bottom="Change Theme">
+                <i class="far fa-moon" style="transform: scaleX(-1);"></i>
+            </button>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <section class="profile">
+                <div class="pfp">
+                    <img class="picture" src="https://api.lanyard.rest/765183514001408020.png" alt="">
+                    <div id="status-dot" data-tooltip=""></div>
+                </div>
+
+                <div class="container">
+                    <h1 class="intro">Hi, I'm <span style="color: #ff0000; text-shadow: 0 0 24px #ff0000cc;">Kaden</span></h1>
+                    <p id="bio">JavaScript is cool on this website though :(</p>
+
+                    <section class="socials">
+                        <a id="twitch" href="" target="_blank" data-tooltip="Twitch Streams"><i class="fab fa-twitch"></i></a>
+                        <a id="twitter" href="" target="_blank" data-tooltip="Twitter/X Posts"><i class="fab fa-x-twitter"></i></a>
+                        <a id="steam" href="" target="_blank" data-tooltip="Steam Games"><i class="fab fa-steam"></i></a>
+                        <a id="github" href="" target="_blank" data-tooltip="Github Projects"><i class="fab fa-github"></i></a>
+                    </section>
+                </section>
+            </section>
+
+            <hr class="seperator">
+            
+            <section id="contact">
+                <h1 class="section-title">Contact Me</h1>
+                <p class="section-desc">Want to reach out? Heres how.</p>
+
+                <div class="container">
+                    <!-- Discord -->
+                    <a class="contact card" href="https://discord.com/users/765183514001408020" target="_blank">
+                        <i class="fab fa-discord"></i>
+                        <p id="discord-user">kadenissilly</p>
+                    </a>
+                    
+                    <!-- Email -->
+                    <a class="contact card" href="mailto:contact.kadenissilly@gmail.com" target="_blank">
+                        <i class="fas fa-envelope"></i>
+                        <p>contact.kadenissilly@gmail.com</p>
+                    </a>
+                </div>
+            </section>
+        </main>
+    </body>
+
+    <!-- Scripts -->
+    <script src="/scripts/script.js"></script>
+
+    <script>
+    </script>
+
+    <!-- Analytics -->
+    <script>
+        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</html>

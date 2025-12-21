@@ -1,0 +1,18 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": ".",
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/pages/index.html"
+    },
+    {
+      "source": "/projects",
+      "destination": "/pages/projects.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/pages/contact.html"
+    }
+  ]
+}

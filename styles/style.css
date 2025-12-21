@@ -1,0 +1,440 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --background: radial-gradient(circle at top, #1a1a1a 0%, #111111 50%, #0a0a0a 100%);
+    --selection: #ececec;
+    --card-bg: #1c1c1ccc;
+    --card-border: #2d2d2d;
+    --language-bg: #272727f1;
+    --title: #f5f5f5;
+    --text: #e8e8e8;
+    --description: #b4b4b4;
+    --link: #adadad;
+    --link-hovered: #d0d0d0;
+    --seperator: #303030;
+}
+
+[data-theme="light"] {
+    --background: radial-gradient(circle at top, #ffffff 0%, #f5f5f5 50%, #ebebeb 100%);
+    --selection: #1a1a1a;
+    --card-bg: #ffffffcc;
+    --card-border: #d4d4d4;
+    --language-bg: #e2e2e2f1;
+    --title: #0a0a0a;
+    --text: #1a1a1a;
+    --description: #4a4a4a;
+    --link: #525252;
+    --link-hovered: #2f2f2f;
+    --seperator: #cfcfcf;
+}
+
+body {
+    margin: 0 auto;
+    padding: 15px 0;
+    max-width: 1000px;
+    min-height: 100vh;
+    background: var(--background);
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 500;
+    color: var(--text);
+}
+
+::selection {
+    background-color: var(--selection);
+    color: var(--seperator);
+}
+
+h1 {
+    color: var(--title);
+}
+
+a, button {
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: var(--link);
+    text-decoration: none;
+}
+
+a:hover, button:hover {
+    color: var(--link-hovered);
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    user-select: none;
+}
+
+/* Tooltip (Top) */
+[data-tooltip] {
+    position: relative;
+    cursor: pointer;
+}
+
+[data-tooltip]::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 12px;
+    background: var(--card-bg);
+    border: solid 2px var(--card-border);
+    border-radius: 12px;
+    backdrop-filter: blur(20px);
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--description);
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 1000;
+    transition: all 0.2s ease;
+}
+
+[data-tooltip]::after {
+    content: '';
+    position: absolute;
+    bottom: calc(100% + 4px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 6px 0 6px;
+    border-color: var(--card-border) transparent transparent transparent;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 1000;
+    transition: all 0.2s ease;
+}
+
+[data-tooltip]:hover::before,
+[data-tooltip]:hover::after {
+    opacity: 1;
+}
+
+/* Tooltip (Bottom) */
+[data-tooltip-bottom] {
+    position: relative;
+    cursor: pointer;
+}
+
+[data-tooltip-bottom]::before {
+    content: attr(data-tooltip-bottom);
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 12px;
+    background: var(--card-bg);
+    border: solid 2px var(--card-border);
+    border-radius: 12px;
+    backdrop-filter: blur(20px);
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--description);
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 1000;
+    transition: all 0.2s ease;
+}
+
+[data-tooltip-bottom]::after {
+    content: '';
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 6px 6px 6px;
+    border-color: transparent transparent var(--card-border) transparent;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 1000;
+    transition: all 0.2s ease;
+}
+
+[data-tooltip-bottom]:hover::before,
+[data-tooltip-bottom]:hover::after {
+    opacity: 1;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1000;
+}
+
+header #theme-toggler, header nav a {
+    font-size: 22px;
+    transition: all 0.15s ease;
+}
+
+header #theme-toggler:hover, header nav a:hover {
+    scale: 1.1;
+}
+
+header #theme-toggler:active {
+    scale: 1;
+}
+
+header nav {
+    display: flex;
+    gap: 18px;
+}
+
+/* Main Styles */
+main {
+    padding: 25px 50px;
+}
+
+.profile {
+    margin-left: 25px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.profile .pfp {
+    position: relative;
+    width: fit-content;
+}
+
+.profile .picture {
+    width: 150px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 4px 8px 16px #0000001e;
+    transform: rotate(-2.5deg);
+}
+
+.pfp #status-dot {
+    display: none;
+    position: absolute;
+    bottom: -5px;
+    right: -8px;
+    width: 24px;
+    height: 24px;
+    background-color: #00000000;
+    border: 4px solid var(--card-border);
+    border-radius: 50%;
+    cursor: help;
+}
+
+.profile .container {
+    margin-bottom: 15px;
+}
+
+.profile .intro {
+    font-size: 36px;
+}
+
+.profile #bio {
+    margin-left: 5px;
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--description);
+}
+
+.profile .container .socials {
+    margin-top: 15px;
+    margin-left: 10px;
+    display: flex;
+    gap: 8px;
+}
+
+.profile .container .socials a {
+    font-size: 19px;
+    transition: all 0.2s ease;
+}
+
+.profile .container .socials a:hover {
+    transform: scale(1.1);
+}
+
+.section-title {
+    font-size: 29px;
+    user-select: none;
+}
+
+.section-desc {
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--description);
+    margin-bottom: 15px;
+    user-select: none;
+}
+
+.card {
+    padding: 10px 15px;
+    background: var(--card-bg);
+    border: solid 3px var(--card-border);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.seperator {
+    margin: 30px 0;
+    height: 2.5px;
+    background: linear-gradient(to right, transparent, var(--seperator), transparent);
+    border: none;
+}
+
+.error-text {
+    font-weight: 700;
+    font-size: 19px;
+    color: #dd0000de;  
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Reset and Base Styles */
+    body {
+        padding: 16px;
+    }
+
+    /* Header Styles */
+    header #theme-toggler, header nav a {
+        font-size: 20px;
+    }
+
+    header nav {
+        gap: 15px;
+    }
+
+    /* Main Styles */
+    main {
+        padding: 25px 25px;
+    }
+
+    .profile {
+        margin-left: 25px;
+        display: grid;
+        gap: 15px;
+    }
+
+    .profile .picture {
+        width: 130px;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 2px 4px 8px #0000001e;
+    }
+
+    .pfp #status-dot {
+        width: 16px;
+        height: 16px;
+        border: 2.75px solid var(--card-border);
+    }
+
+    .profile .intro {
+        font-size: 34px;
+    }
+
+    .profile #bio {
+        margin-left: 0;
+        font-size: 14px;
+    }
+
+    .profile .container .socials {
+        margin-left: 0;
+        gap: 5px;
+    }
+
+    .profile .container .socials a {
+        font-size: 17px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .section-desc {
+        font-size: 14px;
+    }
+
+    .card {
+        padding: 8px 13px;
+        border-radius: 4px;
+    }
+
+    .seperator {
+        height: 2px;
+    }
+
+    .error-text {
+        font-weight: 700;
+        font-size: 17px;
+        color: #dd0000de;  
+    }
+}
+@media (max-width: 480px) {
+    /* Reset and Base Styles */
+    body {
+        padding: 12px 10px;
+    }
+
+    /* Header Styles */
+    header #theme-toggler, header nav a {
+        font-size: 18px;
+    }
+
+    /* Main Styles */
+    main {
+        padding: 15px 5px;
+    }
+
+    .profile .picture {
+        width: 100px;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .pfp #status-dot {
+        bottom: -2px;
+        right: -5px;
+        width: 12px;
+        height: 12px;
+        border: 2px solid var(--card-border);
+    }
+
+    .profile .intro {
+        font-size: 30px;
+    }
+
+    .profile #bio {
+        font-size: 12px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .section-desc {
+        font-size: 12px;
+    }
+
+    .error-text {
+        font-weight: 700;
+        font-size: 15px;
+        color: #dd0000de;  
+    }
+}

@@ -359,21 +359,10 @@ main {
     }
 
     /* Main Styles */
-    main {
-        padding: 25px 25px;
-    }
-
     .profile {
         margin-left: 25px;
         display: grid;
         gap: 15px;
-    }
-
-    .profile .picture {
-        width: 130px;
-        height: auto;
-        border-radius: 10px;
-        box-shadow: 2px 4px 8px #0000001e;
     }
 
     .pfp #status-dot {
@@ -388,16 +377,10 @@ main {
 
     .profile #bio {
         margin-left: 0;
-        font-size: 14px;
     }
 
     .profile .container .socials {
         margin-left: 0;
-        gap: 5px;
-    }
-
-    .profile .container .socials a {
-        font-size: 17px;
     }
 
     .section-title {

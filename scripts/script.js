@@ -95,6 +95,7 @@ function loadLanyard() {
 
     function updateSocials(d) {
         document.getElementById('twitch').href = d.kv.twitch;
+        document.getElementById('youtube').href = d.kv.youtube;
         document.getElementById('twitter').href = d.kv.twitter;
         document.getElementById('steam').href = d.kv.steam;
         document.getElementById('github').href = d.kv.github;

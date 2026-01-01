@@ -248,12 +248,17 @@
                     gameCard.target = '_blank';
                     
                     gameCard.innerHTML = `
-                        <img src="${game.Icon}" alt="${game.Name}" class="icon">
+                        <img src="${game.Icon}" alt="${game.Name}'s Icon" class="icon">
                         <section class="info">
                             <h1 class="title">${game.Name}</h1>
                             <p class="playtime">
                                 <span style="font-weight: 600; color: var(--link-hovered);"><i class="far fa-clock"></i> Playtime:</span> ${game.Playtime}
                             </p>
+                            ${game.Achievements ? `
+                                <p class="achievements">
+                                    <span style="font-weight: 600; color: var(--link-hovered);"><i class="fas fa-trophy"></i> Achievements:</span> ${game.Achievements.earned}/${game.Achievements.total}
+                                </p>
+                            ` : ''}
                         </section>
                     `;
                     

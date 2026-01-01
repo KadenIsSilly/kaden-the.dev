@@ -9,12 +9,12 @@
         <link rel="icon" href="/assets/images/favicon.ico">
         <link rel="shortcut icon" href="/assets/images/favicon.ico">
         <title>Kaden's Portfolio</title>
-        <meta name="description" content="This is Kaden's portfolio. Here you can find all the games, websites and computers he's worked on!">
+        <meta name="description" content="This is Kaden's portfolio. Here you can find all the games, websites and mods he's worked on!">
         <!-- Open Graph Tags -->
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://kadenissilly.com/projects">
         <meta property="og:title" content="Kaden's Portfolio">
-        <meta property="og:description" content="This is Kaden's portfolio. Here you can find all the games, websites and computers he's worked on!">
+        <meta property="og:description" content="This is Kaden's portfolio. Here you can find all the games, websites and mods he's worked on!">
         <meta property="og:image" content="https://api.lanyard.rest/765183514001408020.png">
         <meta property="theme-color" content="#ff0000">
         <!-- Styling -->
@@ -22,13 +22,13 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
         <link rel="stylesheet" href="/styles/style.css">
         <style>
-            #games .container, #websites .container {
+            #games .container, #websites .container, #mods .container {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 gap: 12px;
             }
 
-            #games .project, #websites .project {
+            .project {
                 padding: 10px;
                 display: flex;
                 gap: 12px;
@@ -37,36 +37,36 @@
                 transition: all 0.3s ease;
             }
 
-            #games .project:hover, #websites .project:hover {
+            .project:hover {
                 border-color: #ff0000;
                 box-shadow: 0 0 8px #ff0000;
                 transform: scale(1.025)
             }
 
-            #games .project .icon, #websites .project .icon {
+            .project .icon {
                 width: 75px;
                 height: auto;
                 border-radius: 12px;
             }
 
-            #games .project .info, #websites .project .info {
+            .project .info {
                 margin-bottom: 5px;
             }
 
-            #games .project .info .title, #websites .project .info .title {
+            .project .info .title {
                 font-weight: 600;
                 font-size: 20px;
                 color: var(--text);
             }
 
-            #games .project .info .desc, #websites .project .info .desc {
+            .project .info .desc {
                 font-weight: 400;
                 font-size: 14px;
                 color: var(--description);
                 user-select: none;
             }
 
-            #games .project .info .languages, #websites .project .info .languages {
+            .project .info .languages {
                 margin-top: 5px;
                 padding: 3px 6px;
                 width: fit-content;
@@ -76,61 +76,61 @@
                 user-select: none;
             }
 
-            #games .project .info .csharp, #websites .project .info .csharp {
-                color: #68217a;
-                text-shadow: 0 0 12px #68217ab0;
+            .project .info .gsc {
+                color: #e58a48;
+                text-shadow: 0 0 12px #e58a48b0;
             }
 
-            #games .project .info .js, #websites .project .info .js {
+            .project .info .js {
                 color: #f0db4f;
                 text-shadow: 0 0 12px #f0da4fb0;
             }
 
-            #games .project .info .css, #websites .project .info .css {
+            .project .info .css {
                 color: #3d8fc6;
                 text-shadow: 0 0 12px #3d8fc6b0;
             }
 
-            #games .project .info .html, #websites .project .info .html {
+            .project .info .html {
                 color: #e54d26;
                 text-shadow: 0 0 12px #e54d26b0;
             }
 
-            #games .project .info .lua, #websites .project .info .lua {
+            .project .info .lua {
                 color: #4b93bf;
                 text-shadow: 0 0 12px #4b93bfb0;
             }
 
             /* Responsive Styles */
             @media (max-width: 768px) {
-                #games .container, #websites .container {
+                #games .container, #websites .container, #mods .container {
                     grid-template-columns: repeat(1, 1fr);
                     gap: 10px;
                 }
 
-                #games .project, #websites .project {
+                .project {
                     box-shadow: 0 0 4px var(--card-bg);
                 }
 
-                #games .project .icon, #websites .project .icon {
+                .project .icon {
                     width: 60px;
                     height: auto;
                     border-radius: 8px;
                 }
 
-                #games .project .info, #websites .project .info {
+                .project .info {
                     margin-bottom: 2px;
                 }
 
-                #games .project .info .title, #websites .project .info .title {
+                .project .info .title {
                     font-size: 17px;
                 }
 
-                #games .project .info .desc, #websites .project .info .desc {
+                .project .info .desc {
                     font-size: 13px;
                 }
 
-                #games .project .info .languages, #websites .project .info .languages {
+                .project .info .languages {
                     border-radius: 5px;
                     font-size: 11px;
                     user-select: none;
@@ -138,25 +138,25 @@
             }
 
             @media (max-width: 480px) {
-                #games .project .icon, #websites .project .icon {
+                .project .icon {
                     width: 50px;
                     height: auto;
                     border-radius: 6px;
                 }
 
-                #games .project .info, #websites .project .info {
+                .project .info {
                     margin-bottom: 0;
                 }
 
-                #games .project .info .title, #websites .project .info .title {
+                .project .info .title {
                     font-size: 16px;
                 }
 
-                #games .project .info .desc, #websites .project .info .desc {
+                .project .info .desc {
                     font-size: 12px;
                 }
 
-                #games .project .info .languages, #websites .project .info .languages {
+                .project .info .languages {
                     border-radius: 4px;
                     font-size: 10px;
                 }
@@ -224,6 +224,18 @@
                 <div class="container">
                 </div>
             </section>
+
+            <hr class="seperator">
+            
+            <section id="mods">
+                <h1 class="section-title">Game Mods</h1>
+                <p class="section-desc">A list of all the game mods I've worked on!</p>
+
+                <noscript><p class="error-text">Failed to load websites, Please enable JavaScript</p></noscript>
+                
+                <div class="container">
+                </div>
+            </section>
         </main>
     </body>
 
@@ -264,6 +276,15 @@
                         description: "The official website for the Archive SMP",
                         languages: ["HTML", "CSS", "JS"]
                     }
+                ],
+                mods: [
+                    {
+                        url: "https://github.com/KadenIsSilly/m-day",
+                        icon: "https://api.lanyard.rest/765183514001408020.png",
+                        title: "M-Day",
+                        description: "Scripts to remove the mutants in Exo Zombies",
+                        languages: ["GSC"]
+                    }
                 ]
             };
 
@@ -289,6 +310,9 @@
             
             document.querySelector('#websites .container').innerHTML = 
                 projects.websites.map(createProject).join('');
+            
+            document.querySelector('#mods .container').innerHTML = 
+                projects.mods.map(createProject).join('');
         }
 
         loadProjects();

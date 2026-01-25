@@ -77,6 +77,11 @@
                 user-select: none;
             }
 
+            .project .info .cs {
+                color: #178600;
+                text-shadow: 0 0 12px #178600b0;
+            }
+
             .project .info .cpp {
                 color: #f34b7d;
                 text-shadow: 0 0 12px #f34b7db0;
@@ -250,6 +255,13 @@
             function loadProjects() {
                 const projects = {
                     games: [
+                        {
+                            url: "https://soapmug.itch.io/i-see-you",
+                            icon: "/assets/images/projects/i_see_you.png",
+                            title: "Keep the Viewers Up!",
+                            description: "Perform tasks to keep your viewers entertained",
+                            languages: ["C#"]
+                        },
                         {
                             url: "https://youtu.be/xj8ZapKHgZY?t=1345",
                             icon: "/assets/images/projects/ktvu.png",

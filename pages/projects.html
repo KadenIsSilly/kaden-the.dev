@@ -45,7 +45,8 @@
 
             .project .icon {
                 width: 75px;
-                height: auto;
+                height: 100%;
+                object-fit: cover;
                 border-radius: 12px;
             }
 
@@ -74,6 +75,11 @@
                 border-radius: 7px;
                 font-size: 12px;
                 user-select: none;
+            }
+
+            .project .info .cpp {
+                color: #f34b7d;
+                text-shadow: 0 0 12px #f34b7db0;
             }
 
             .project .info .gsc {
@@ -114,7 +120,7 @@
 
                 .project .icon {
                     width: 60px;
-                    height: auto;
+                    height: 100%;
                     border-radius: 8px;
                 }
 
@@ -140,7 +146,7 @@
             @media (max-width: 480px) {
                 .project .icon {
                     width: 50px;
-                    height: auto;
+                    height: 100%;
                     border-radius: 6px;
                 }
 
@@ -245,6 +251,13 @@
                 const projects = {
                     games: [
                         {
+                            url: "https://youtu.be/xj8ZapKHgZY?t=1345",
+                            icon: "/assets/images/projects/ktvu.png",
+                            title: "Keep the Viewers Up!",
+                            description: "Perform tasks to keep your viewers entertained",
+                            languages: ["Unreal Blueprint"]
+                        },
+                        {
                             url: "https://www.roblox.com/games/13413041261/Coco_Pops",
                             icon: "/assets/images/projects/coco_pops.png",
                             title: "Coco Pops",
@@ -288,8 +301,23 @@
 
                 function createProject(project) {
                     const langs = project.languages
-                        .map(lang => `<span class="language ${lang.toLowerCase()}">${lang}</span>`)
-                        .join(' / ');
+                        .map(lang => {
+                            let langClass;
+
+                            switch (lang) {
+                                case 'C#':
+                                    langClass = 'cs';
+                                    break;
+                                case 'Unreal Blueprint':
+                                case 'C++':
+                                    langClass = 'cpp';
+                                    break;
+                            default:
+                                langClass = lang.toLowerCase();
+                            }
+                            return `<span class="language ${langClass}">${lang}</span>`;
+                        })
+                        .join(' / ')
 
                     return `
                         <a class="project card" href="${project.url}" target="_blank">

@@ -1,34 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- Main Tags -->
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="color-scheme" content="dark">
-        <link rel="canonical" href="https://kaden-the.dev/projects">
         <link rel="icon" href="/assets/images/me.png">
-        <link rel="shortcut icon" href="/assets/images/me.png">
         <title>Kaden's Portfolio</title>
-        <meta name="description" content="This is Kaden's portfolio. Here you can find all the games, websites and mods he's worked on!">
-        <!-- Open Graph Tags -->
+
+        <!-- Open Graph-->
         <meta property="og:type" content="website">
-        <meta property="og:url" content="https://kaden-the.dev/projects">
         <meta property="og:title" content="Kaden's Portfolio">
-        <meta property="og:description" content="This is Kaden's portfolio. Here you can find all the games, websites and mods he's worked on!">
-        <meta property="og:image" content="/assets/images/me.png">
-        <meta property="theme-color" content="#ff0000">
+        <meta property="og:description" content="Kaden is a Scottish nerd. He likes to make games, websites and even mods!">
+        <meta property="og:theme-color" content="#ff0000">
+
         <!-- Styling -->
         <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
         <link rel="stylesheet" href="/styles/style.css">
         <style>
-            #games .container, #websites .container, #mods .container {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
+            /* Header styles */
+            header nav .link .fa-folder-open {
+                color: var(--accent);
+            }
+
+            /* Projects */
+            #projects .info-container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            #projects .info-container .sorting {
+                display: flex;
+                align-items: center;
                 gap: 12px;
             }
 
-            .project {
+            #projects .info-container .sorting button {
+                font-family: 'Instrument Sans', sans-serif;
+                color: var(--description);
+                transition: all 0.3s ease;
+                cursor: pointer;
+            }
+
+            #projects .info-container .sorting button:hover {
+                color: var(--text);
+                border: solid 3px var(--accent);
+                border-radius: 4px;
+                scale: 1.1;
+            }
+
+            #projects .info-container .sorting .active {
+                color: var(--title);
+                border: solid 3px var(--accent);
+                border-radius: 4px;
+                cursor: default;
+            }
+
+            #projects .info-container .sorting .active:hover {
+                scale: 1;
+            }
+
+            #projects .project-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(425px, 1fr));
+                gap: 12px;
+            }
+
+            #projects .project {
                 padding: 10px;
                 display: flex;
                 gap: 12px;
@@ -37,341 +76,363 @@
                 transition: all 0.3s ease;
             }
 
-            .project:hover {
+            #projects .project:hover {
                 border-color: #ff0000;
                 box-shadow: 0 0 8px #ff0000;
                 transform: scale(1.025)
             }
 
-            .project .icon {
+            #projects .project .icon {
                 width: 75px;
                 height: 100%;
                 object-fit: cover;
                 border-radius: 12px;
             }
 
-            .project .info {
+            #projects .project .info {
                 margin-bottom: 5px;
             }
 
-            .project .info .title {
+            #projects .project .info .title {
                 font-weight: 600;
                 font-size: 20px;
                 color: var(--text);
             }
 
-            .project .info .desc {
+            #projects .project .info .desc {
                 font-weight: 400;
                 font-size: 14px;
                 color: var(--description);
                 user-select: none;
             }
 
-            .project .info .languages {
+            #projects .project .info .languages {
                 margin-top: 5px;
                 padding: 3px 6px;
                 width: fit-content;
                 background-color: var(--language-bg);
                 border-radius: 7px;
                 font-size: 12px;
+                color: var(--description);
                 user-select: none;
             }
 
-            .project .info .cs {
+            #projects .project .info .cs {
                 color: #178600;
                 text-shadow: 0 0 12px #178600b0;
             }
 
-            .project .info .cpp {
-                color: #f34b7d;
-                text-shadow: 0 0 12px #f34b7db0;
+            #projects .project .info .us {
+                color: #a54c4d;
+                text-shadow: 0 0 12px #a54c4db0;
             }
 
-            .project .info .gsc {
+            #projects .project .info .gsc {
                 color: #ff6800;
                 text-shadow: 0 0 12px #ff6800b0;
             }
 
-            .project .info .js {
+            #projects .project .info .js {
                 color: #f1e05a;
                 text-shadow: 0 0 12px #f1e05ab0;
             }
 
-            .project .info .css {
+            #projects .project .info .css {
                 color: #663399;
                 text-shadow: 0 0 12px #663399b0;
             }
 
-            .project .info .html {
+            #projects .project .info .html {
                 color: #e34c26;
                 text-shadow: 0 0 12px #e34c26b0;
             }
 
-            .project .info .lua {
+            #projects .project .info .lua {
                 color: #000080;
                 text-shadow: 0 0 12px #000080b0;
             }
 
-            /* Responsive Styles */
             @media (max-width: 768px) {
-                #games .container, #websites .container, #mods .container {
-                    grid-template-columns: repeat(1, 1fr);
-                    gap: 10px;
+                /* Projects */
+                #projects .project .icon {
+                    width: 65px;
+                    height: 65px;
+                    border-radius: 6px;
+                }
+                
+                #projects .project .info .title {
+                    font-size: 18px;
                 }
 
-                .project {
-                    box-shadow: 0 0 4px var(--card-bg);
-                }
-
-                .project .icon {
-                    width: 60px;
-                    height: 100%;
-                    border-radius: 8px;
-                }
-
-                .project .info {
-                    margin-bottom: 2px;
-                }
-
-                .project .info .title {
-                    font-size: 17px;
-                }
-
-                .project .info .desc {
+                #projects .project .info .desc {
                     font-size: 13px;
                 }
 
-                .project .info .languages {
-                    border-radius: 5px;
+                #projects .project .info .languages {
                     font-size: 11px;
-                    user-select: none;
                 }
             }
 
             @media (max-width: 480px) {
-                .project .icon {
-                    width: 50px;
-                    height: 100%;
-                    border-radius: 6px;
+                /* Projects */
+                #projects .info-container {
+                    display: block;
+                    margin-bottom: 10px;
                 }
 
-                .project .info {
-                    margin-bottom: 0;
-                }
-
-                .project .info .title {
-                    font-size: 16px;
-                }
-
-                .project .info .desc {
+                #projects .info-container .sorting button {
+                    padding: 7px;
                     font-size: 12px;
+                    border-radius: 2px;
                 }
 
-                .project .info .languages {
+                #projects .project .icon {
+                    width: 45px;
+                    height: 45px;
                     border-radius: 4px;
-                    font-size: 10px;
+                }
+                
+                #projects .project .info .title {
+                    font-size: 15px;
+                }
+
+                #projects .project .info .desc {
+                    font-size: 11px;
+                }
+
+                #projects .project .info .languages {
+                    font-size: 8px;
                 }
             }
         </style>
+
+        <!-- Google Tag Manager -->
+        <script>
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({
+                'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })
+
+            (window,document,'script','dataLayer','GTM-NSZX52XJ');
+        </script>
     </head>
 
     <body>
-        <!-- Header -->
         <header>
             <nav>
-                <a href="/" data-tooltip-bottom="Home"><i class="far fa-house"></i></a>
-                <a href="/projects" data-tooltip-bottom="Projects"><i class="far fa-folder-open"></i></a>
-                <a href="/contact" data-tooltip-bottom="Contact Me"><i class="far fa-envelope"></i></a>
+                <a class="link" href="/"><i class="far fa-house"></i></a>
+                <a class="link" href="/projects"><i class="far fa-folder-open"></i></a>
+                <a class="link" href="/contact"><i class="far fa-envelope"></i></a>
             </nav>
-
-            
-            <button id="theme-toggler" data-tooltip-bottom="Change Theme">
-                <i class="far fa-moon" style="transform: scaleX(-1);"></i>
-            </button>
         </header>
 
-        <!-- Main Content -->
         <main>
-            <section class="profile">
-                <div class="pfp">
-                    <img class="picture" src="/assets/images/me.png" alt="">
-                    <div id="status-dot" data-tooltip=""></div>
-                </div>
-
+            <!-- Profile -->
+            <section id="profile">
                 <div class="container">
-                    <h1 class="intro">Hi, I'm <span style="color: #ff0000; text-shadow: 0 0 24px #ff0000cc;">Kaden</span></h1>
-                    <p id="bio">JavaScript is cool on this website though :(</p>
+                    <img class="picture" src="/assets/images/me.png" alt="Picture of Kaden">
 
-                    <section class="socials">
-                        <a id="twitch" href="" target="_blank" data-tooltip="Twitch Streams"><i class="fab fa-twitch"></i></a>
-                        <a id="twitter" href="" target="_blank" data-tooltip="Twitter/X Posts"><i class="fab fa-x-twitter"></i></a>
-                        <a id="steam" href="" target="_blank" data-tooltip="Steam Games"><i class="fab fa-steam"></i></a>
-                        <a id="github" href="" target="_blank" data-tooltip="Github Projects"><i class="fab fa-github"></i></a>
+                    <h1 class="intro">Hi, I'm <span>Kaden</span></h1>
+                    <p class="bio">I do things, occasionally</p>
+
+                    <section class="links">
+                        <a class="link" href="https://store.steampowered.com/dev/Kaden" target="_blank"><i class="fab fa-steam"></i></a>
+                        <a class="link" href="https://kadenissilly.itch.io" target="_blank"><i class="fab fa-itch-io"></i></a>
+                        <a class="link" href="https://github.com/KadenIsSilly" target="_blank"><i class="fab fa-github"></i></a>
                     </section>
                 </div>
             </section>
 
             <hr class="seperator">
             
-            <section id="games">
-                <h1 class="section-title">Games</h1>
-                <p class="section-desc">A list of all the games I've worked on!</p>
+            <!-- Projects -->
+            <section id="projects">
+                <div class="info-container">
+                    <section class="info">
+                        <h1 class="section-title">Projects</h1>
+                        <h1 class="section-desc">A list of all the stuff I've worked on.</h1>
+                    </section>
 
-                <noscript><p class="error-text">Failed to load games, Please enable JavaScript</p></noscript>
+                    <section class="sorting">
+                        <button class="card active">
+                            <p>All</p>
+                        </button>
 
-                <div class="container">
+                        <button class="card">
+                            <p>Games</p>
+                        </button>
+
+                        <button class="card">
+                            <p>Websites</p>
+                        </button>
+
+                        <button class="card">
+                            <p>Mods</p>
+                        </button>
+                    </section>
                 </div>
-            </section>
 
-            <hr class="seperator">
-            
-            <section id="websites">
-                <h1 class="section-title">Websites</h1>
-                <p class="section-desc">A list of all the websites I've worked on!</p>
-
-                <noscript><p class="error-text">Failed to load websites, Please enable JavaScript</p></noscript>
-                
-                <div class="container">
-                </div>
-            </section>
-
-            <hr class="seperator">
-            
-            <section id="mods">
-                <h1 class="section-title">Game Mods</h1>
-                <p class="section-desc">A list of all the game mods I've worked on!</p>
-
-                <noscript><p class="error-text">Failed to load websites, Please enable JavaScript</p></noscript>
-                
-                <div class="container">
+                <div class="project-container">
                 </div>
             </section>
         </main>
 
-        <!-- Scripts -->
-        <script src="/scripts/script.js"></script>
-
         <script>
-            function loadProjects() {
-                const projects = {
-                    games: [
-                        {
-                            url: "https://soapmug.itch.io/i-see-you",
-                            icon: "/assets/images/projects/i_see_you.png",
-                            title: "I See You",
-                            description: "Try get rid of a virus while trying not to get fired",
-                            languages: ["C#"]
-                        },
-                        {
-                            url: "https://youtu.be/xj8ZapKHgZY?t=1345",
-                            icon: "/assets/images/projects/ktvu.png",
-                            title: "Keep the Viewers Up!",
-                            description: "Perform tasks to keep your viewers entertained",
-                            languages: ["Unreal Blueprint"]
-                        },
-                        {
-                            url: "https://www.roblox.com/games/13413041261/Coco_Pops",
-                            icon: "/assets/images/projects/coco_pops.png",
-                            title: "Coco Pops",
-                            description: "It's just Coco Pops",
-                            languages: ["LUA"]
-                        },
-                        {
-                            url: "https://www.roblox.com/games/12651990651/Explode",
-                            icon: "/assets/images/projects/explode.png",
-                            title: "Explode",
-                            description: "It's in the name 🤷‍♂️",
-                            languages: ["LUA"]
-                        }
-                    ],
-                    websites: [
-                        {
-                            url: "https://github.com/KadenIsSilly/kadenissilly.com",
-                            icon: "https://api.lanyard.rest/765183514001408020.png",
-                            title: "kadenissilly.com",
-                            description: "My own wee landing page",
-                            languages: ["CSS", "HTML", "JS"]
-                        },
-                        {
-                            url: "https://github.com/KadenIsSilly/kaden-the.dev",
-                            icon: "/assets/images/me.png",
-                            title: "kaden-the.dev",
-                            description: "My personal website/portfolio",
-                            languages: ["HTML", "CSS", "JS"]
-                        },
-                        {
-                            url: "https://github.com/KadenIsSilly/archivesmp.net",
-                            icon: "/assets/images/projects/archivesmp.png",
-                            title: "archivesmp.net",
-                            description: "The official website for the Archive SMP",
-                            languages: ["HTML", "CSS", "JS"]
-                        }
-                    ],
-                    mods: [
-                        {
-                            url: "https://github.com/KadenIsSilly/M-Day",
-                            icon: "/assets/images/projects/m-day.png",
-                            title: "M-Day",
-                            description: "Scripts to remove the mutants in Exo Zombies",
-                            languages: ["GSC"]
-                        }
-                    ]
-                };
+            // Project data
+            const projects = {
+                games: [
+                    { 
+                        order: 8, 
+                        url: "https://soapmug.itch.io/i_see_you", 
+                        icon: "/assets/images/projects/i_see_you.png", 
+                        title: "I See You", 
+                        description: "Get rid of a virus while trying not to get fired.", 
+                        languages: ["C#"] 
+                    },
+                    { 
+                        order: 3, 
+                        url: "https://www.youtube.com/watch?v=xj8ZapKHgZY&t=1345s", 
+                        icon: "/assets/images/projects/ktvu.png", 
+                        title: "Keep the Viewers Up!",
+                        description: "Perform tasks to keep your viewers entertained!", 
+                        languages: ["Unreal Script"] 
+                    },
+                    { 
+                        order: 2, 
+                        url: "https://www.roblox.com/games/13413041261/Coco_Pops", 
+                        icon: "/assets/images/projects/coco_pops.png", 
+                        title: "Coco Pops.", 
+                        description: "It's just Coco Pops.", 
+                        languages: ["LUA"] 
+                    },
+                    { 
+                        order: 1, 
+                        url: "https://www.roblox.com/games/12651990651/Explode", 
+                        icon: "/assets/images/projects/explode.png", 
+                        title: "Explode.", 
+                        description: "It's in the name 🤷‍♂️", 
+                        languages: ["LUA"] 
+                    }
+                ],
+                websites: [
+                    { 
+                        order: 7, 
+                        url: "https://github.com/KadenIsSilly/kadenissilly.com", 
+                        icon: "https://api.lanyard.rest/765183514001408020.png", 
+                        title: "kadenissilly.com", 
+                        description: "My own wee landing page.", 
+                        languages: ["HTML", "CSS", "JS"] 
+                    },
+                    { 
+                        order: 5, 
+                        url: "https://github.com/KadenIsSilly/kaden-the.dev", 
+                        icon: "/assets/images/me.png", 
+                        title: "kaden-the.dev", 
+                        description: "My personal website/portfolio.", 
+                        languages: ["HTML", "CSS", "JS"] 
+                    },
+                    { 
+                        order: 4, 
+                        url: "https://github.com/KadenIsSilly/archivesmp.net", 
+                        icon: "/assets/images/projects/archivesmp.png", 
+                        title: "archivesmp.net", 
+                        description: "The official website for the ArchiveSMP.", 
+                        languages: ["HTML", "CSS", "JS"] 
+                    }
+                ],
+                mods: [
+                    { 
+                        order: 6, 
+                        url: "https://github.com/KadenIsSilly/M-Day", 
+                        icon: "/assets/images/projects/m-day.png", 
+                        title: "M-Day", 
+                        description: "Scripts to remove the mutants in Exo Zombies.", 
+                        languages: ["GSC"] 
+                    }
+                ]
+            };
 
-                function createProject(project) {
-                    const langs = project.languages
-                        .map(lang => {
-                            let langClass;
-
-                            switch (lang) {
-                                case 'C#':
-                                    langClass = 'cs';
-                                    break;
-                                case 'Unreal Blueprint':
-                                case 'C++':
-                                    langClass = 'cpp';
-                                    break;
-                            default:
-                                langClass = lang.toLowerCase();
-                            }
-                            return `<span class="language ${langClass}">${lang}</span>`;
-                        })
-                        .join(' / ')
-
-                    return `
-                        <a class="project card" href="${project.url}" target="_blank">
-                            <img class="icon" src="${project.icon}" alt="${project.title}'s Icon">
-                            <section class="info">
-                                <h1 class="title">${project.title}</h1>
-                                <p class="desc">${project.description}</p>
-                                <div class="languages">${langs}</div>
-                            </section>
-                        </a>
-                    `;
-                }
-
-                document.querySelector('#games .container').innerHTML = 
-                    projects.games.map(createProject).join('');
-                
-                document.querySelector('#websites .container').innerHTML = 
-                    projects.websites.map(createProject).join('');
-                
-                document.querySelector('#mods .container').innerHTML = 
-                    projects.mods.map(createProject).join('');
+            // Sort
+            function sortByOrder(list) {
+                return list.slice().sort((b, a) => a.order - b.order);
             }
 
-            loadProjects();
+            // Create project
+            function createProject(project) {
+                const langs = project.languages.map(lang => {
+                    let cls = lang.toLowerCase();
+                    if (lang === "C#") cls = "cs";
+                    if (lang === "Unreal Script") cls = "us";
+                    return `<span class="language ${cls}">${lang}</span>`;
+                }).join(" / ");
+
+                return `
+                    <a class="project card" href="${project.url}" target="_blank">
+                        <img class="icon" src="${project.icon}" alt="${project.title} icon">
+                        <section class="info">
+                            <h1 class="title">${project.title}</h1>
+                            <p class="desc">${project.description}</p>
+                            <div class="languages">${langs}</div>
+                        </section>
+                    </a>
+                `;
+            }
+
+            // Render projects
+            function renderProjects(filter = "All") {
+                try {
+                    const container = document.querySelector(".project-container");
+                    container.innerHTML = "";
+
+                    let list;
+
+                    // Filter projects
+                    switch (filter) {
+                        case "Games":
+                            list = projects.games;
+                            break;
+                        case "Websites":
+                            list = projects.websites;
+                            break;
+                        case "Mods":
+                            list = projects.mods;
+                            break;
+                        default:
+                            list = [
+                                ...projects.games,
+                                ...projects.websites,
+                                ...projects.mods
+                            ];
+                    }
+
+                    sortByOrder(list).forEach(p => {
+                        container.insertAdjacentHTML("beforeend", createProject(p));
+                    });
+                } catch (error) {
+                    console.error(`ERROR: ${error}`);
+                }
+            }
+
+            // Filter buttons
+            function setupFilters() {
+                try {
+                    const buttons = document.querySelectorAll("#projects .sorting button");
+
+                    buttons.forEach(button => {
+                        button.addEventListener("click", () => {
+                            buttons.forEach(b => b.classList.remove("active"));
+                            button.classList.add("active");
+
+                            renderProjects(button.textContent.trim());
+                        });
+                    });
+                } catch (error) {
+                    console.error(`ERROR: ${error}`);
+                }
+            }
+
+            renderProjects("All");
+            setupFilters();
         </script>
-        
-        <!-- Analytics -->
-        <script>
-            window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-        </script>
-        <script defer src="/_vercel/insights/script.js"></script>
-        <!-- Speed Insights -->
-        <script>
-            window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
-        </script>
-        <script defer src="/_vercel/speed-insights/script.js"></script>
     </body>
 </html>

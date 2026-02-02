@@ -7,24 +7,8 @@
       "destination": "/pages/home.html"
     },
     {
-      "source": "/about",
-      "destination": "/#about-me"
-    },
-    {
       "source": "/projects",
       "destination": "/pages/projects.html"
-    },
-    {
-      "source": "/games",
-      "destination": "/projects/#games"
-    },
-    {
-      "source": "/websites",
-      "destination": "/projects/#websites"
-    },
-    {
-      "source": "/mods",
-      "destination": "/projects/#mods"
     },
     {
       "source": "/contact",

@@ -18,152 +18,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
         <link rel="stylesheet" href="/styles/style.css">
-        <style>
-            /* Header styles */
-            header nav .link .fa-house {
-                color: var(--accent);
-            }
-
-            /* About Me */
-            #about-me {
-                margin-bottom: 25px;
-            }
-
-            #about-me .card {
-                border-color: #ff000060;
-            }
-
-            #about-me .card .text {
-                font-size: 18px;
-            }
-
-            #about-me .card .text #fav-game,
-            #about-me .card .text #fav-game-pt {
-                color: var(--title);
-                transition: all 0.3s ease;
-            }
-
-            #about-me .card .text #fav-game:hover {
-                color: var(--accent);
-            }
-
-            /* Experience */
-            #experience .container {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-                gap: 12px;
-            }
-
-            #experience .card {
-                padding: 20px;
-            }
-
-            #experience .card .container {
-                display: flex;
-                align-items: center;
-                gap: 12px;
-            }
-
-            #experience .card i {
-                font-size: 19px;
-                color: var(--title);
-                text-align: center;
-            }
-
-            #experience .card .title {
-                font-size: 20px;
-                font-weight: 600;
-                color: var(--text);
-                margin-bottom: 4px;
-                display: flex;
-                align-items: center;
-                gap: 10px;
-            }
-
-            #experience .card .role {
-                font-size: 17px;
-                font-weight: 500;
-                color: var(--description);
-                user-select: none;
-            }
-
-            #experience .card .timeframe {
-                margin-top: 10px;
-                font-size: 15px;
-                font-weight: 400;
-                color: var(--link);
-                display: flex;
-                align-items: center;
-                gap: 8px;
-                user-select: none;
-            }
-
-            #experience .card .timeframe i {
-                font-size: 14px;
-                color: var(--link);
-                text-align: center;
-            }
-
-            /* Responsive styles */
-            @media (max-width: 768px) {
-                /* About Me */
-                #about-me .card .text {
-                    font-size: 13.5px;
-                }
-
-                /* Experience */
-                #experience .card {
-                    padding: 13px;
-                }
-
-                #experience .card i {
-                    font-size: 17px;
-                }
-
-                #experience .card .title {
-                    font-size: 18px;
-                }
-
-                #experience .card .role {
-                    font-size: 15px;
-                }
-
-                #experience .card .timeframe {
-                    font-size: 13px;
-                }
-
-                #experience .card .timeframe i {
-                    font-size: 12px;
-                }
-            }
-            
-            @media (max-width: 480px) {
-                /* About Me */
-                #about-me .card .text {
-                    font-size: 12px;
-                }
-
-                #experience .card i {
-                    font-size: 14px;
-                }
-
-                #experience .card .title {
-                    font-size: 16px;
-                }
-
-                #experience .card .role {
-                    font-size: 13px;
-                }
-
-                #experience .card .timeframe {
-                    font-size: 11px;
-                }
-
-                #experience .card .timeframe i {
-                    font-size: 10px;
-                }
-        }
-        </style>
 
         <!-- Google Tag Manager -->
         <script>
@@ -177,14 +31,6 @@
     </head>
 
     <body>
-        <header>
-            <nav>
-                <a class="link" href="/"><i class="far fa-house"></i></a>
-                <a class="link" href="/projects"><i class="far fa-folder-closed"></i></a>
-                <a class="link" href="/contact"><i class="far fa-envelope"></i></a>
-            </nav>
-        </header>
-
         <main>
             <!-- Profile -->
             <section id="profile">
@@ -198,6 +44,7 @@
                         <a class="link" href="https://store.steampowered.com/dev/Kaden" target="_blank"><i class="fab fa-steam"></i></a>
                         <a class="link" href="https://kadenissilly.itch.io" target="_blank"><i class="fab fa-itch-io"></i></a>
                         <a class="link" href="https://github.com/KadenIsSilly" target="_blank"><i class="fab fa-github"></i></a>
+                        <a class="link" href="mailto:contact@kaden-the.dev" target="_blank"><i class="fas fa-envelope"></i></a>
                     </section>
                 </div>
             </section>
@@ -247,6 +94,39 @@
                     </div>
                 </div>
             </section>
+
+            <hr class="seperator">
+
+            <!-- Projects -->
+            <section id="projects">
+                <div class="info-container">
+                    <section class="info">
+                        <h1 class="section-title">Projects</h1>
+                        <h1 class="section-desc">A list of all the stuff I've worked on.</h1>
+                    </section>
+
+                    <section class="sorting">
+                        <button class="card active">
+                            <p>All</p>
+                        </button>
+
+                        <button class="card">
+                            <p>Games</p>
+                        </button>
+
+                        <button class="card">
+                            <p>Websites</p>
+                        </button>
+
+                        <button class="card">
+                            <p>Mods</p>
+                        </button>
+                    </section>
+                </div>
+
+                <div class="project-container">
+                </div>
+            </section>
         </main>
 
         <script>
@@ -290,8 +170,163 @@
                 }
             }
 
+            // Project data
+            const projects = {
+                games: [
+                    { 
+                        order: 8, 
+                        url: "https://soapmug.itch.io/i_see_you", 
+                        icon: "/assets/images/projects/i_see_you.png", 
+                        title: "I See You", 
+                        description: "Get rid of a virus while trying not to get fired.", 
+                        languages: ["C#"] 
+                    },
+                    { 
+                        order: 3, 
+                        url: "https://www.youtube.com/watch?v=xj8ZapKHgZY&t=1345s", 
+                        icon: "/assets/images/projects/ktvu.png", 
+                        title: "Keep the Viewers Up!",
+                        description: "Perform tasks to keep your viewers entertained!", 
+                        languages: ["Unreal Script"] 
+                    },
+                    { 
+                        order: 2, 
+                        url: "https://www.roblox.com/games/13413041261/Coco_Pops", 
+                        icon: "/assets/images/projects/coco_pops.png", 
+                        title: "Coco Pops.", 
+                        description: "It's just Coco Pops.", 
+                        languages: ["LUA"] 
+                    },
+                    { 
+                        order: 1, 
+                        url: "https://www.roblox.com/games/12651990651/Explode", 
+                        icon: "/assets/images/projects/explode.png", 
+                        title: "Explode.", 
+                        description: "It's in the name 🤷‍♂️", 
+                        languages: ["LUA"] 
+                    }
+                ],
+                websites: [
+                    { 
+                        order: 7, 
+                        url: "https://kadenissilly.com", 
+                        icon: "https://api.lanyard.rest/765183514001408020.png", 
+                        title: "kadenissilly.com", 
+                        description: "My own wee landing page.", 
+                        languages: ["HTML", "CSS", "JS"] 
+                    },
+                    { 
+                        order: 5, 
+                        url: "https://kaden-the.dev", 
+                        icon: "/assets/images/me.png", 
+                        title: "kaden-the.dev", 
+                        description: "My personal website/portfolio.", 
+                        languages: ["HTML", "CSS", "JS"] 
+                    },
+                    { 
+                        order: 4, 
+                        url: "https://archivesmp.net", 
+                        icon: "/assets/images/projects/archivesmp.png", 
+                        title: "archivesmp.net", 
+                        description: "The official website for the ArchiveSMP.", 
+                        languages: ["HTML", "CSS", "JS"] 
+                    }
+                ],
+                mods: [
+                    { 
+                        order: 6, 
+                        url: "https://github.com/KadenIsSilly/M-Day", 
+                        icon: "/assets/images/projects/m-day.png", 
+                        title: "M-Day", 
+                        description: "Scripts to remove the mutants in Exo Zombies.", 
+                        languages: ["GSC"] 
+                    }
+                ]
+            };
+
+            // Sort
+            function sortByOrder(list) {
+                return list.slice().sort((b, a) => a.order - b.order);
+            }
+
+            // Create project
+            function createProject(project) {
+                const langs = project.languages.map(lang => {
+                    let cls = lang.toLowerCase();
+                    if (lang === "C#") cls = "cs";
+                    if (lang === "Unreal Script") cls = "us";
+                    return `<span class="language ${cls}">${lang}</span>`;
+                }).join(" / ");
+
+                return `
+                    <a class="project card" href="${project.url}" target="_blank">
+                        <img class="icon" src="${project.icon}" alt="${project.title} icon">
+                        <section class="info">
+                            <h1 class="title">${project.title}</h1>
+                            <p class="desc">${project.description}</p>
+                            <div class="languages">${langs}</div>
+                        </section>
+                    </a>
+                `;
+            }
+
+            // Render projects
+            function renderProjects(filter = "All") {
+                try {
+                    const container = document.querySelector(".project-container");
+                    container.innerHTML = "";
+
+                    let list;
+
+                    // Filter projects
+                    switch (filter) {
+                        case "Games":
+                            list = projects.games;
+                            break;
+                        case "Websites":
+                            list = projects.websites;
+                            break;
+                        case "Mods":
+                            list = projects.mods;
+                            break;
+                        default:
+                            list = [
+                                ...projects.games,
+                                ...projects.websites,
+                                ...projects.mods
+                            ];
+                    }
+
+                    sortByOrder(list).forEach(p => {
+                        container.insertAdjacentHTML("beforeend", createProject(p));
+                    });
+                } catch (error) {
+                    console.error(`ERROR: ${error}`);
+                }
+            }
+
+            // Filter buttons
+            function setupFilters() {
+                try {
+                    const buttons = document.querySelectorAll("#projects .sorting button");
+
+                    buttons.forEach(button => {
+                        button.addEventListener("click", () => {
+                            buttons.forEach(b => b.classList.remove("active"));
+                            button.classList.add("active");
+
+                            renderProjects(button.textContent.trim());
+                        });
+                    });
+                } catch (error) {
+                    console.error(`ERROR: ${error}`);
+                }
+            }
+
             updateAge();
             fetchFavGame();
+            renderProjects("All");
+            setupFilters();
         </script>
     </body>
 </html>

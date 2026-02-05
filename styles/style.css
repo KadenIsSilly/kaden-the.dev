@@ -52,28 +52,6 @@ img {
     user-select: none;
 }
 
-/* Header styles */
-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-header nav {
-    display: flex;
-    gap: 12px;
-}
-
-header nav .link {
-    font-size: 22px;
-    transition: all 0.15s ease;
-}
-
-header nav .link:hover {
-    transform: translateY(-2px);
-    scale: 1.05;
-}
-
 /* Main styles */
 main {
     padding: 25px 50px;
@@ -121,7 +99,7 @@ main {
 }
 
 #profile .links .link:hover {
-    color: var(--text);
+    color: var(--accent);
     scale: 1.1;
 }
 
@@ -154,23 +132,217 @@ main {
     backdrop-filter: blur(10px);
 }
 
+/* About Me */
+#about-me {
+    margin-bottom: 25px;
+}
+
+#about-me .card {
+    border-color: #ff000060;
+}
+
+#about-me .card .text {
+    font-size: 18px;
+}
+
+#about-me .card .text #fav-game,
+#about-me .card .text #fav-game-pt {
+    color: var(--title);
+    transition: all 0.3s ease;
+}
+
+#about-me .card .text #fav-game:hover {
+    color: var(--accent);
+}
+
+/* Experience */
+#experience .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 12px;
+}
+
+#experience .card {
+    padding: 20px;
+}
+
+#experience .card .container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#experience .card i {
+    font-size: 19px;
+    color: var(--title);
+    text-align: center;
+}
+
+#experience .card .title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#experience .card .role {
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--description);
+    user-select: none;
+}
+
+#experience .card .timeframe {
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--link);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    user-select: none;
+}
+
+#experience .card .timeframe i {
+    font-size: 14px;
+    color: var(--link);
+    text-align: center;
+}
+
+/* Projects */
+#projects .info-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#projects .info-container .sorting {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#projects .info-container .sorting button {
+    font-family: 'Instrument Sans', sans-serif;
+    color: var(--description);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#projects .info-container .sorting button:hover {
+    color: var(--text);
+    border: solid 3px var(--accent);
+    border-radius: 4px;
+    scale: 1.1;
+}
+
+#projects .info-container .sorting .active {
+    color: var(--title);
+    border: solid 3px var(--accent);
+    border-radius: 4px;
+    cursor: default;
+}
+
+#projects .info-container .sorting .active:hover {
+    scale: 1;
+}
+
+#projects .project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(425px, 1fr));
+    gap: 12px;
+}
+
+#projects .project {
+    padding: 10px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    box-shadow: 0 0 8px var(--card-bg);
+    transition: all 0.3s ease;
+}
+
+#projects .project:hover {
+    border-color: #ff0000;
+    box-shadow: 0 0 8px #ff0000;
+    transform: scale(1.025)
+}
+
+#projects .project .icon {
+    width: 75px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+#projects .project .info {
+    margin-bottom: 5px;
+}
+
+#projects .project .info .title {
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--text);
+}
+
+#projects .project .info .desc {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--description);
+    user-select: none;
+}
+
+#projects .project .info .languages {
+    margin-top: 5px;
+    padding: 3px 6px;
+    width: fit-content;
+    background-color: var(--language-bg);
+    border-radius: 7px;
+    font-size: 12px;
+    color: var(--description);
+    user-select: none;
+}
+
+#projects .project .info .cs {
+    color: #178600;
+    text-shadow: 0 0 12px #178600b0;
+}
+
+#projects .project .info .us {
+    color: #a54c4d;
+    text-shadow: 0 0 12px #a54c4db0;
+}
+
+#projects .project .info .gsc {
+    color: #ff6800;
+    text-shadow: 0 0 12px #ff6800b0;
+}
+
+#projects .project .info .js {
+    color: #f1e05a;
+    text-shadow: 0 0 12px #f1e05ab0;
+}
+
+#projects .project .info .css {
+    color: #663399;
+    text-shadow: 0 0 12px #663399b0;
+}
+
+#projects .project .info .html {
+    color: #e34c26;
+    text-shadow: 0 0 12px #e34c26b0;
+}
+
+#projects .project .info .lua {
+    color: #000080;
+    text-shadow: 0 0 12px #000080b0;
+}
+
 /* Responvie styles */
 @media (max-width: 768px) {
-    /* Reset & Base styles */
-    body {
-        padding: 20px 0;
-    }
-
-    /* Header styles */
-    header nav {
-        gap: 16px;
-    }
-
-    header nav .link {
-        font-size: 22px;
-        transition: all 0.15s ease;
-    }
-
     /* Main styles */
     /* Profile */
     #profile .picture {
@@ -209,6 +381,55 @@ main {
     .card {
         border: solid 2px var(--card-border);
     }
+
+    /* About Me */
+    #about-me .card .text {
+        font-size: 13.5px;
+    }
+    
+    /* Experience */
+    #experience .card {
+        padding: 13px;
+    }
+
+    #experience .card i {
+        font-size: 17px;
+    }
+
+    #experience .card .title {
+        font-size: 18px;
+    }
+
+    #experience .card .role {
+        font-size: 15px;
+    }
+
+    #experience .card .timeframe {
+        font-size: 13px;
+    }
+
+    #experience .card .timeframe i {
+        font-size: 12px;
+    }
+
+    /* Projects */
+    #projects .project .icon {
+        width: 65px;
+        height: 65px;
+        border-radius: 6px;
+    }
+    
+    #projects .project .info .title {
+        font-size: 18px;
+    }
+
+    #projects .project .info .desc {
+        font-size: 13px;
+    }
+
+    #projects .project .info .languages {
+        font-size: 11px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -217,17 +438,7 @@ main {
         padding: 15px 0;
     }
 
-    /* Header styles */
-    header nav {
-        gap: 18px;
-    }
-
-    header nav .link {
-        font-size: 20px;
-    }
-
     /* Main styles */
-    
     main {
         padding: 25px 25px;
     }
@@ -262,5 +473,61 @@ main {
     .section-desc {
         font-weight: 400;
         font-size: 10px;
+    }
+
+    /* About Me */
+    #about-me .card .text {
+        font-size: 12px;
+    }
+
+    /* Experience */
+    #experience .card i {
+        font-size: 14px;
+    }
+
+    #experience .card .title {
+        font-size: 16px;
+    }
+
+    #experience .card .role {
+        font-size: 13px;
+    }
+
+    #experience .card .timeframe {
+        font-size: 11px;
+    }
+
+    #experience .card .timeframe i {
+        font-size: 10px;
+    }
+
+    /* Projects */
+    #projects .info-container {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    #projects .info-container .sorting button {
+        padding: 7px;
+        font-size: 12px;
+        border-radius: 2px;
+    }
+
+    #projects .project .icon {
+        width: 45px;
+        height: 45px;
+        border-radius: 4px;
+    }
+    
+    #projects .project .info .title {
+        font-size: 15px;
+    }
+
+    #projects .project .info .desc {
+        font-size: 11px;
+    }
+
+    #projects .project .info .languages {
+        font-size: 8px;
     }
 }

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="color-scheme" content="dark">
+
+        <title>Kaden Deering's Portfolio | ERROR 404</title>
+        <link rel="icon" type="image/png" href="/assets/images/me.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="/styles/style.css">
+
+        <style>
+            button {
+                padding: 0;
+                background: none;
+                border: none;
+                font-family: 'Instrument Sans', sans-serif;
+                font-weight: 500;
+                cursor: pointer;
+            }
+
+            main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+
+            main h1 {
+                font-size: 46px;
+                color: var(--accent);
+            }
+
+            main .details {
+                font-weight: 500;
+                font-size: 23px;
+                color: var(--title);
+                margin-bottom: 10px;
+                user-select: none;
+            }
+
+            main p {
+                font-weight: 400;
+                font-size: 16px;
+                color: var(--text);
+                user-select: none;
+            }
+
+            main .container {
+                margin-top: 25px;
+                display: flex;
+                align-items: center;
+                gap: 18px;
+            }
+
+            main .container .home {
+                padding: 10px 12px;
+                background-color: var(--accent-dimmed);
+                border-radius: 10px;
+                font-size: 17px;
+                color: var(--title);
+                transition: all 0.2s ease;
+            } main .container .home:hover {
+                background-color: var(--accent);
+            }
+
+            main .container .back {
+                padding: 10px 12px;
+                background-color: var(--bg2);
+                border-radius: 10px;
+                font-size: 17px;
+                color: var(--title);
+                transition: all 0.2s ease;
+            } main .container .back:hover {
+                background-color: var(--card-bg);
+            }
+        </style>
+    </head>
+
+    <body>
+        <main>
+            <h1>ERROR 404</h1>
+            <p class="details">Page Not Found</p>
+            <p>Whatever you're looking for it no longer exists, or never did.</p>
+
+            <div class="container">
+                <a class="home" href="/">Go Home</a>
+                <button class="back" onclick="history.back()" href="/">Go Back</a>
+            </div>
+        </main>
+
+        <footer>
+            <hr class="section-split">
+
+            <div class="container">
+                <p>Made with <i class="far fa-heart"></i> by Kaden &bullet; Inspired by <a href="https://isabelroses.com/" target="_blank">Isabel</a></p>
+
+                <section class="links">
+                    <a href="https://store.steampowered.com/dev/Kaden"><i class="fab fa-steam"></i></a>
+                    <a href="https://kadenissilly.itch.io/"><i class="fab fa-itch-io"></i></a>
+                    <a href="https://github.com/KadenIsSilly"><i class="fab fa-github"></i></a>
+                </section>
+            </div>
+        </footer>
+
+        <!------------------------------------------------>
+        <script>
+            window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+        </script>
+        <script defer src="/_vercel/insights/script.js"></script>
+
+        <script>
+            window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+        </script>
+        <script defer src="/_vercel/speed-insights/script.js"></script>
+    </body>
+</html>

@@ -1,533 +1,654 @@
-/* Reset & Base styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: font-size 0.3s ease, padding 0.3s ease, margin 0.3s ease, width 0.3s ease;
 }
 
 :root {
-    --bg: radial-gradient(circle at top, #1a1a1a 0%, #111111 50%, #0a0a0a 100%);
-    --title: #ffffff;
-    --text: #e9e9e9;
-    --description: #c0c0c0;
-    --link: #afafaf;
+    --bg: #111113;
+    --bg2: #1a1a1e;
+    --card-bg: #222225;
+    --title: #f0f0f2;
+    --text: #c8c8d0;
+    --sub-text: #8a8a90;
     --accent: #ff0000;
-    --seperator: #303030;
-    --card-bg: #1c1c1ccc;
-    --card-border: #2d2d2d;
-    --language-bg: #272727f1;
+    --accent-dimmed: #ff0000af;
 }
 
-body {
-    margin: 0 auto;
-    padding: 15px 0;
-    max-width: 1000px;
-    min-height: 100vh;
-    background: var(--bg);
+html {
+    scroll-behavior: smooth;
+    background-color: var(--bg);
     font-family: 'Instrument Sans', sans-serif;
     font-weight: 500;
     color: var(--text);
 }
 
 ::selection {
-    background-color: #ff000075;
-    color: inherit;
+    background-color: #0078d4;
+    color: white;
 }
 
-h1 {
-    color: var(--title);
-    font-weight: 600;
+body {
+    max-width: 860px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
 }
 
-a {
-    color: var(--link);
-    text-decoration: none;
-}
-
-a:hover {
-    color: var(--accent);
+main {
+    padding: 36px 0 72px;
+    flex: 1;
 }
 
 img {
     user-select: none;
 }
 
-/* Main styles */
-main {
-    padding: 25px 50px;
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
-/* Profile */
-#profile .container {
-    text-align: center;
+#profile .profile {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 24px;
 }
 
-#profile .picture {
-    margin-bottom: 10px;
-    width: 150px;
-    height: auto;
-    border-radius: 15px;
-    border: var(--card-border) solid 4px;
+#profile .profile img {
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-#profile .intro {
-    font-size: 32px;
-}
-
-#profile .intro span {
+#profile .profile .content .name {
+    font-size: 26px;
     color: var(--accent);
-    animation: flicker 1s infinite;
-    text-shadow: 0 0 24px #ff0000cc, 0 0 12px #ff0000cc;
+}
+
+#profile .profile .content .status {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    user-select: none;
+}
+
+#profile .profile .content .status .dot {
+    width: 10px;
+    height: 10px;
+    background-color: #83848c;
+    border-radius: 50%;
+}
+
+#profile .profile .content .status .text {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--sub-text);
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 14px;
+    border-radius: 8px;
 }
 
 #profile .bio {
-    font-size: 15px;
-    color: var(--description);
-    margin-bottom: 15px;
+    margin: 0 12px 18px;
+    border: var(--accent-dimmed) 2px solid;
 }
 
-#profile .links {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
+#profile .bio p {
+    font-size: 16.75px;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
 }
 
-#profile .links .link {
-    font-size: 20px;
-    transition: all 0.15s ease;
-}
-
-#profile .links .link:hover {
+#profile .bio p #fav-game-title {
+    color: var(--title);
+    text-decoration-color: var(--accent);
+    transition: all 0.2s ease;
+} #profile .bio p #fav-game-title:hover {
     color: var(--accent);
-    scale: 1.1;
+    text-decoration: underline;
 }
 
-/* Misc */
-.seperator {
-    margin: 25px 0;
-    height: 2.5px;
-    background: linear-gradient(to right, transparent, var(--seperator), transparent);
+#profile .work {
+    width: fit-content;
+    margin: 0 24px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--bg2);
+    user-select: none;
+}
+
+#profile .work .icon {
+    font-size: 18px;
+    color: var(--accent);
+}
+
+#profile .work .text {
+    font-size: 14px;
+    color: var(--sub-text);
+}
+
+#profile .work .text .link {
+    color: var(--accent-dimmed);
+    text-decoration-color: var(--accent-dimmed);
+    transition: all 0.2s ease;
+} #profile .work .text .link:hover {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+.section-split {
+    margin: 48px 0;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--card-bg), transparent);
     border: none;
 }
 
 .section-title {
-    font-size: 30px;
+    font-size: 26px;
+    color: var(--title);
     user-select: none;
 }
 
 .section-desc {
     font-weight: 400;
     font-size: 16px;
-    color: var(--description);
-    margin-bottom: 15px;
+    color: var(--sub-text);
+    margin-bottom: 18px;
     user-select: none;
 }
 
-.card {
-    padding: 10px 15px;
-    background: var(--card-bg);
-    border: solid 3px var(--card-border);
-    border-radius: 8px;
-    backdrop-filter: blur(10px);
+.error-text {
+    font-weight: 600;
+    font-size: 17px;
+    color: #f19408;
+    user-select: none;
 }
 
-/* About Me */
-#about-me {
-    margin-bottom: 25px;
-}
-
-#about-me .card {
-    border-color: #ff000060;
-}
-
-#about-me .card .text {
-    font-size: 18px;
-}
-
-#about-me .card .text #fav-game,
-#about-me .card .text #fav-game-pt {
-    color: var(--title);
-    transition: all 0.3s ease;
-}
-
-#about-me .card .text #fav-game:hover {
-    color: var(--accent);
-}
-
-/* Experience */
-#experience .container {
+#projects #projects-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(424px, 1fr));
     gap: 12px;
 }
 
-#experience .card {
-    padding: 20px;
+#projects #projects-list .project:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
 }
 
-#experience .card .container {
+#projects #projects-list .project {
+    padding: 12px;
+    transition: all 0.3s ease;
+    border: transparent 2px solid;
+    filter: saturate(0%);
+} #projects #projects-list .project:hover {
+    border-color: #ff0000;
+    filter: saturate(100%);
+}
+
+#projects #projects-list .project .content {
     display: flex;
     align-items: center;
     gap: 12px;
+    min-width: 0;
+    margin-bottom: 12px;
 }
 
-#experience .card i {
+#projects #projects-list .project .content img {
+    width: 62px;
+    height: 62px;
+    border-radius: 10%;
+    object-fit: cover;
+}
+
+#projects #projects-list .project .content .details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+#projects #projects-list .project .content .details .name {
     font-size: 19px;
     color: var(--title);
-    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-#experience .card .title {
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--text);
-    margin-bottom: 4px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-#experience .card .role {
-    font-size: 17px;
-    font-weight: 500;
-    color: var(--description);
+#projects #projects-list .project .content .details .desc {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--sub-text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     user-select: none;
 }
 
-#experience .card .timeframe {
-    margin-top: 10px;
-    font-size: 15px;
-    font-weight: 400;
-    color: var(--link);
+#projects #projects-list .project .info {
     display: flex;
     align-items: center;
     gap: 8px;
+}
+
+#projects #projects-list .project .info .infoc {
+    padding: 4px 8px;
+    background-color: var(--bg2);
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 12px;
     user-select: none;
 }
 
-#experience .card .timeframe i {
+#projects #projects-list .project .info .unity {
+    color: #4d4d4d;
+}
+
+#projects #projects-list .project .info .cs {
+    color: #68217a;
+}
+
+#projects #projects-list .project .info .gsc {
+    color: #febd41;
+}
+
+#projects #projects-list .project .info .html {
+    color: #e54d26;
+}
+
+#projects #projects-list .project .info .css {
+    color: #3d8fc6;
+}
+
+#projects #projects-list .project .info .js {
+    color: #f0db4f;
+}
+
+#projects #projects-list .project .info .ue {
+    color: #f5f5f5;
+}
+
+#projects #projects-list .project .info .blueprint {
+    color: #335fff;
+}
+
+#projects #projects-list .project .info .roblox {
+    color: #335fff;
+}
+
+#projects #projects-list .project .info .lua {
+    color: #000080;
+}
+
+#projects #projects-list .show-more {
+    grid-column: 1 / -1;
+    padding: 10px;
+    background-color: var(--card-bg);
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-family: 'Instrument Sans', sans-serif;
     font-size: 14px;
-    color: var(--link);
+    font-weight: 500;
+    color: var(--sub-text);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#projects #projects-list .show-more:hover {
+    border-color: var(--accent);
+    color: var(--title);
+}
+
+#contact .contact {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 22px;
+    background-color: var(--bg2);
     text-align: center;
 }
 
-/* Projects */
-#projects .info-container {
+#contact .contact .title {
+    font-size: 24px;
+    color: var(--title);
+    user-select: none;
+    margin-bottom: 4px;
+}
+
+#contact .contact .subtitle {
+    font-size: 15px;
+    color: var(--text);
+    user-select: none;
+}
+
+#contact .contact #response-time {
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--sub-text);
+    user-select: none;
+}
+
+#contact .contact .section-split {
+    margin: 24px 0;
+}
+
+#contact .contact .links {
+    margin-top: 20px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact .contact .links a {
     display: flex;
     align-items: center;
+    gap: 8px;
+    padding: 12px;
+    background-color: var(--card-bg);
+    border-radius: 6px;
+    font-size: 15px;
+    transition: all 0.2s ease;
+}
+
+#contact .contact .links .discord:hover {
+    background-color: #5662f6;
+    padding: 12px;
+    border-radius: 6px;
+    color: #ffffff;
+}
+
+#contact .contact .links .email:hover {
+    background-color: #ea4335;
+    padding: 12px;
+    border-radius: 6px;
+    color: #ffffff;
+}
+
+#contact .contact #clients {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    justify-content: center;
+    margin-top: 18px;
+}
+
+#contact .contact #clients .client:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+}
+
+#contact .contact #clients .client {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: center;
+    border: transparent 2px solid;
+    transition: all 0.3s ease;
+}
+
+#contact .contact #clients .client:hover {
+    border: var(--accent-dimmed) 2px solid;
+}
+
+#contact .contact #clients .client .details {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+#contact .contact #clients .client .details img {
+    width: 46px;
+    height: 46px;
+    border-radius: 10%;
+    object-fit: cover;
+}
+
+#contact .contact #clients .client .details .info {
+    text-align: left;
+}
+
+#contact .contact #clients .client .details .info .name {
+    font-size: 19px;
+}
+
+#contact .contact #clients .client .details .info .project {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--sub-text);
+}
+
+#contact .contact #clients .client .rating {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+#contact .contact #clients .client .rating .fa-star,
+#contact .contact #clients .client .rating .fa-star-half-stroke {
+    color: #f5c518;
+}
+
+#contact .contact #clients .client .rating .fa-star:not(.fas) {
+    color: #f5c51869;
+}
+
+#contact .contact #clients .client .rating span {
+    font-weight: 400;
+    font-size: 13px;
+    color: var(--sub-text);
+    user-select: none;
+}
+
+footer {
+    margin-bottom: 14px;
+    user-select: none;
+}
+
+footer .section-split {
+    margin: 0;
+    margin-bottom: 12px;
+    height: 2px;
+}
+
+footer .container {
+    padding: 0 14px;
+    display: flex;
     justify-content: space-between;
 }
 
-#projects .info-container .sorting {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-#projects .info-container .sorting button {
-    font-family: 'Instrument Sans', sans-serif;
-    color: var(--description);
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-#projects .info-container .sorting button:hover {
-    color: var(--text);
-    border: solid 3px var(--accent);
-    border-radius: 4px;
-    scale: 1.1;
-}
-
-#projects .info-container .sorting .active {
-    color: var(--title);
-    border: solid 3px var(--accent);
-    border-radius: 4px;
-    cursor: default;
-}
-
-#projects .info-container .sorting .active:hover {
-    scale: 1;
-}
-
-#projects .project-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(425px, 1fr));
-    gap: 12px;
-}
-
-#projects .project {
-    padding: 10px;
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    box-shadow: 0 0 8px var(--card-bg);
-    transition: all 0.3s ease;
-}
-
-#projects .project:hover {
-    border-color: #ff0000;
-    box-shadow: 0 0 8px #ff0000;
-    transform: scale(1.025)
-}
-
-#projects .project .icon {
-    width: 75px;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-#projects .project .info {
-    margin-bottom: 5px;
-}
-
-#projects .project .info .title {
-    font-weight: 600;
-    font-size: 20px;
-    color: var(--text);
-}
-
-#projects .project .info .desc {
-    font-weight: 400;
+footer p {
     font-size: 14px;
-    color: var(--description);
-    user-select: none;
+    font-weight: 400;
 }
 
-#projects .project .info .languages {
-    margin-top: 5px;
-    padding: 3px 6px;
-    width: fit-content;
-    background-color: var(--language-bg);
-    border-radius: 7px;
-    font-size: 12px;
-    color: var(--description);
-    user-select: none;
+footer p .fa-heart {
+    color: #e25050;
+    animation: heartbeat 1.2s ease infinite;
 }
 
-#projects .project .info .cs {
-    color: #178600;
-    text-shadow: 0 0 12px #178600b0;
+@keyframes heartbeat {
+    0%, 28%, 56%, 100% { transform: scale(1); }
+    14%  { transform: scale(1.1); }
+    42%  { transform: scale(1.05); }
 }
 
-#projects .project .info .us {
-    color: #a54c4d;
-    text-shadow: 0 0 12px #a54c4db0;
+footer p a {
+    font-weight: 500;
+    color: var(--title);
+    text-decoration-color: #74c6ec8c;
+    transition: all 0.3s ease;
+} footer p a:hover {
+    color: #74c7ec;
+    text-decoration: underline;
 }
 
-#projects .project .info .gsc {
-    color: #ff6800;
-    text-shadow: 0 0 12px #ff6800b0;
+footer .links {
+    display: flex;
+    gap: 8px;
+} 
+
+footer .links a {
+    font-size: 18px;
+    color: var(--sub-text);
+    transition: all 0.3s ease;
+} footer .links a:hover {
+    color: var(--accent);
 }
 
-#projects .project .info .js {
-    color: #f1e05a;
-    text-shadow: 0 0 12px #f1e05ab0;
-}
-
-#projects .project .info .css {
-    color: #663399;
-    text-shadow: 0 0 12px #663399b0;
-}
-
-#projects .project .info .html {
-    color: #e34c26;
-    text-shadow: 0 0 12px #e34c26b0;
-}
-
-#projects .project .info .lua {
-    color: #000080;
-    text-shadow: 0 0 12px #000080b0;
-}
-
-/* Responvie styles */
-@media (max-width: 768px) {
-    /* Main styles */
-    /* Profile */
-    #profile .picture {
-        margin-bottom: 8px;
-        width: 125px;
-        border-radius: 12px;
-        border: var(--card-border) solid 3px;
+@media (max-width: 600px) {
+    body {
+        max-width: 450px;
     }
 
-    #profile .intro {
-        font-size: 28px;
+    main {
+        padding: 25px 0 64px;
     }
 
-    #profile .bio {
-        font-size: 14px;
+    #profile .profile img {
+        width: 68px;
+        height: 68px;
     }
 
-    #profile .links {
-        gap: 12px;
+    #profile .profile .content .name {
+        font-size: 24px;
     }
 
-    #profile .links .link {
-        font-size: 18px;
+    #profile .profile .content .status .dot {
+        width: 8px;
+        height: 8px;
     }
 
-    /* Misc */
-    .section-title {
-        font-size: 27px;
-    }
-
-    .section-desc {
-        font-weight: 400;
-        font-size: 15px;
+    #profile .profile .content .status .text {
+        font-size: 13px;
     }
 
     .card {
-        border: solid 2px var(--card-border);
-    }
-
-    /* About Me */
-    #about-me .card .text {
-        font-size: 13.5px;
-    }
-    
-    /* Experience */
-    #experience .card {
-        padding: 13px;
-    }
-
-    #experience .card i {
-        font-size: 17px;
-    }
-
-    #experience .card .title {
-        font-size: 18px;
-    }
-
-    #experience .card .role {
-        font-size: 15px;
-    }
-
-    #experience .card .timeframe {
-        font-size: 13px;
-    }
-
-    #experience .card .timeframe i {
-        font-size: 12px;
-    }
-
-    /* Projects */
-    #projects .project .icon {
-        width: 65px;
-        height: 65px;
-        border-radius: 6px;
-    }
-    
-    #projects .project .info .title {
-        font-size: 18px;
-    }
-
-    #projects .project .info .desc {
-        font-size: 13px;
-    }
-
-    #projects .project .info .languages {
-        font-size: 11px;
-    }
-}
-
-@media (max-width: 480px) {
-    /* Reset & Base styles */
-    body {
-        padding: 15px 0;
-    }
-
-    /* Main styles */
-    main {
-        padding: 25px 25px;
-    }
-
-    /* Profile */
-    #profile .picture {
-        width: 115px;
-        border-radius: 8px;
-    }
-
-    #profile .intro {
-        font-size: 24px;
+        padding: 12px;
     }
 
     #profile .bio {
-        font-size: 12px;
+        margin: 0 10px 16px;
     }
 
-    #profile .links {
-        gap: 14px;
+    #profile .bio p {
+        font-size: 14.5px;
+        letter-spacing: 0.25px;
+        line-height: 1.4;
     }
 
-    #profile .links .link {
+    #profile .work .icon {
         font-size: 16px;
     }
 
-    /* Misc */
+    #profile .work .text {
+        font-size: 13px;
+    }
+
+    #profile .work .text .link {
+        color: var(--accent);
+        text-decoration: underline;
+    }
+
+    .section-split {
+        margin: 24px 0;
+        height: 3px;
+    }
+
     .section-title {
         font-size: 24px;
     }
 
     .section-desc {
-        font-weight: 400;
-        font-size: 10px;
-    }
-
-    /* About Me */
-    #about-me .card .text {
-        font-size: 12px;
-    }
-
-    /* Experience */
-    #experience .card i {
         font-size: 14px;
     }
 
-    #experience .card .title {
-        font-size: 16px;
-    }
-
-    #experience .card .role {
-        font-size: 13px;
-    }
-
-    #experience .card .timeframe {
-        font-size: 11px;
-    }
-
-    #experience .card .timeframe i {
-        font-size: 10px;
-    }
-
-    /* Projects */
-    #projects .info-container {
-        display: block;
-        margin-bottom: 10px;
-    }
-
-    #projects .info-container .sorting button {
-        padding: 7px;
-        font-size: 12px;
-        border-radius: 2px;
-    }
-
-    #projects .project .icon {
-        width: 45px;
-        height: 45px;
-        border-radius: 4px;
-    }
-    
-    #projects .project .info .title {
+    .error-text {
         font-size: 15px;
     }
 
-    #projects .project .info .desc {
-        font-size: 11px;
+    #projects #projects-list .project {
+        padding: 12px;
+        transition: all 0.3s ease;
+        filter: saturate(100%);
     }
 
-    #projects .project .info .languages {
-        font-size: 8px;
+    #projects #projects-list .project .content img {
+        width: 54px;
+        height: 54px;
+    }
+    
+    #projects #projects-list .show-more {
+        font-size: 12px;
+    }
+
+    #contact .contact .title {
+        font-size: 22px;
+    }
+
+    #contact .contact .subtitle {
+        font-size: 13px;
+    }
+
+    #contact .contact #response-time {
+        font-size: 13px;
+    }
+
+    #contact .contact .section-split {
+        margin: 12px 0;
+    }
+
+    #contact .contact .links a {
+        font-size: 14px;
+    }
+
+    #contact .contact #clients {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 8px;
+    }
+
+    #contact .contact #clients .client .details img {
+        width: 34px;
+        height: 34px;
+    }
+
+    #contact .contact #clients .client .details .info .name {
+        font-size: 16px;
+    }
+
+    #contact .contact #clients .client .details .info .project {
+        font-size: 12px;
+    }
+    
+    #contact .contact #clients .client .rating span {
+        font-size: 13px;
+    }
+    
+    footer .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+    }
+
+    footer p {
+        font-size: 13px;
+    }
+
+    footer p a {
+        color: #74c7ec;
+        text-decoration: underline;
+    }
+
+    footer .links a {
+        font-size: 16px;
     }
 }

@@ -5,6 +5,10 @@
     {
       "source": "/",
       "destination": "/pages/home.html"
+    },
+    {
+      "source": "/cv",
+      "destination": "/pages/kaden_deerings-cv.html"
     }
   ]
 }

@@ -1,149 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="color-scheme" content="dark">
-        <link rel="icon" href="/assets/images/me.png">
-        <title>Kaden's Website</title>
-        <meta name="author" content="Kaden Deering">
 
-        <!-- Open Graph-->
+        <title>Kaden Deering's Portfolio</title>
+        <meta name="description" content="Game and Web Developer based in Scotland with a strong knowledge of computers, gameplay programming and quality assurance.">
+        <link rel="canonical" href="https://kaden-the.dev/">
+        <link rel="icon" type="image/png" href="/assets/images/me.png">
+
         <meta property="og:type" content="website">
-        <meta property="og:title" content="Kaden's Website">
-        <meta property="og:description" content="Kaden is a Scottish nerd. He likes to make games, websites and even mods!">
+        <meta property="og:title" content="Kaden's Portfolio">
+        <meta property="og:description" content="Game and Web Developer based in Scotland with a strong knowledge of computers, gameplay programming and quality assurance.">
+        <meta property="og:url" content="https://kaden-the.dev/">
+        <meta property="og:image" content="https://kaden-the.dev/assets/images/me.png">
         <meta property="theme-color" content="#ff0000">
+        <meta property="og:locale" content="en_GB">
 
-        <!-- Styling -->
-        <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-        <link rel="stylesheet" href="/styles/style.css">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Kaden's Portfolio">
+        <meta name="twitter:description" content="Game and Web Developer based in Scotland with a strong knowledge of computers, gameplay programming and quality assurance.">
+        <meta name="twitter:url" content="https://kaden-the.dev/">
+        <meta name="twitter:image" content="https://kaden-the.dev/assets/images/me.png">
 
-        <!-- Google Tag Manager -->
-        <script>
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({
-                'gtm.start':
-                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })
-
-            (window,document,'script','dataLayer','GTM-NSZX52XJ');
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Kaden Deering",
+                "url": "https://kaden-the.dev/",
+                "jobTitle": "Game & Web Developer",
+                "description": "Game and Web Developer based in Scotland with a strong knowledge of computers, gameplay programming and quality assurance who is passionate about applying his technical skills and gaming knowledge to create exceptional experiences for players.",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressRegion": "Scotland",
+                    "addressCountry": "GB"
+                },
+                "knowsAbout": [
+                    "Game Development",
+                    "Web Development",
+                    "Quality Assurance",
+                    "Computer Hardware"
+                ],
+                "sameAs": [
+                    "https://www.linkedin.com/in/kaden-deering/",
+                    "https://store.steampowered.com/dev/Kaden",
+                    "https://kadenissilly.itch.io/",
+                    "https://github.com/KadenIsSilly"
+                ]
+            }
         </script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-TG3MQ3ZY76"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-TG3MQ3ZY76');
+        </script>
+
+        <link rel="stylesheet" href="/styles/style.css">
     </head>
 
     <body>
         <main>
-            <!-- Profile -->
             <section id="profile">
-                <div class="container">
-                    <img class="picture" src="/assets/images/me.png" alt="Picture of Kaden">
+                <section class="profile">
+                    <img src="/assets/images/me.png" alt="Kaden's profile picture">
 
-                    <h1 class="intro">Hi, I'm <span>Kaden</span></h1>
-                    <p class="bio">I do things, occasionally</p>
+                    <section class="content">
+                        <h1 class="name">Kaden</h1>
+
+                        <section class="status">
+                            <div id="status-dot" class="dot"></div>
+                            <p id="status-text" class="text">Loading...</p>
+                        </section>
+                    </section>
+                </section>
+
+                <div class="bio card">
+                    <p>I'm a Game Developer based in Scotland with a passion for creating exceptional experiences for the players, I also dabble in Web Development from time to time and love the minimalistic style. Through this journey, I took interest in computers and have even built a few desktops!</p>
+                    <br>
+                    <p>Whenever I'm not busy, I usually find myself playing video games, especially sandbox and horror games. My favourite game is currently <a id="fav-game-title" href="" target="_blank">loading...</a>, and I have <span id="fav-game-pt">loading...</span> hours of playtime.</p>
+                </div>
+
+                <div class="work card">
+                    <i class="fas fa-circle-info icon"></i>
+                    <p class="text">I'm currently open for work. Click <a class="link" href="/cv" target="_blank">here</a> to view my CV.</p>
+                </div>
+            </section>
+
+            <hr class="section-split">
+
+            <section id="projects">
+                <h1 class="section-title">Projects</h1>
+                <p class="section-desc">Here is a list of projects I've worked on.</p>
+
+                <section id="projects-list">
+                    <!-- Projects will load here -->
+                    <noscript>
+                        <p class="error-text">Failed to load projects. Please enable JavaScript</p>
+                    </noscript>
+                </section>
+            </section>
+
+            <hr class="section-split">
+
+            <section id="contact">
+                <div class="contact card">
+                    <h1 class="title">Contact Me</h1>
+                    <p class="subtitle">Have a project in mind? Let's have a chat about it</p>
+                    <p id="response-time">
+                        <noscript class="error-text">Couldn't get response time. Please enable JavaScript</noscript>
+                        Response time: Loading...
+                    </p>
 
                     <section class="links">
-                        <a class="link" href="https://store.steampowered.com/dev/Kaden" target="_blank"><i class="fab fa-steam"></i></a>
-                        <a class="link" href="https://kadenissilly.itch.io" target="_blank"><i class="fab fa-itch-io"></i></a>
-                        <a class="link" href="https://github.com/KadenIsSilly" target="_blank"><i class="fab fa-github"></i></a>
-                        <a class="link" href="mailto:message.kaden@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+                        <a class="discord" href="https://discord.com/users/765183514001408020" target="_blank"><i class="fab fa-discord"></i> @KadenIsSilly</a>
+                        <a class="email" href="mailto:message.kaden@gmail.com" target="_blank"><i class="far fa-envelope"></i> message.kaden@gmail.com</a>
                     </section>
-                </div>
-            </section>
+                    
+                    <hr class="section-split">
+                    
+                    <h1 class="title">Clients</h1>
 
-            <hr class="seperator">
-            
-            <!-- About -->
-            <section id="about-me">
-                <h1 class="section-title">About Me</h1>
-                <p class="section-desc">Here is a lil info dump about who I am and what I do.</p>
-
-                <div class="card">
-                    <p class="text">I'm an <span id="age"></span> y/o nerd from Scotland with an interest in technology. My main focus is game development, however I also dabble in some web development from time to time. While learning to code, I found that computers themselves are really interesting and have even built a couple desktops! Whenever I'm not busy I find myself playing video games, especially sandbox and horror games. My favourite game is currently <a id="fav-game" href="" target="_blank"></a> and I have <span id="fav-game-pt"></span> of playtime.</p>
-                </div>
-            </section>
-            
-            <!-- Experience -->
-            <section id="experience">
-                <h1 class="section-title">Experience</h1>
-                <p class="section-desc">My education and work history.</p>
-
-                <div class="container">
-                    <div class="card">
-                        <div class="container">
-                            <i class="fas fa-briefcase"></i>
-                            <div class="info">
-                                <h1 class="title">Freelance<p class="role">Web Developer</p></h1>
-                            </div>
-                        </div>
-                        <p class="timeframe">
-                            <i class="far fa-calendar"></i>
-                            Oct 2025 - Present
-                        </p>
-                    </div>
-
-                    <div class="card">
-                        <div class="container">
-                            <i class="fas fa-graduation-cap"></i>
-                            <div class="info">
-                                <h1 class="title">HNC: Games Development<p class="role">Student</p></h1>
-                            </div>
-                        </div>
-                        <p class="timeframe">
-                            <i class="far fa-calendar"></i>
-                            Sep 2025 - May 2026
-                        </p>
-                    </div>
-
-                    <div class="card">
-                        <div class="container">
-                            <i class="fas fa-briefcase"></i>
-                            <div class="info">
-                                <h1 class="title">Self Employed<p class="role">Game Developer</p></h1>
-                            </div>
-                        </div>
-                        <p class="timeframe">
-                            <i class="far fa-calendar"></i>
-                            Mar 2023 - Present
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <hr class="seperator">
-
-            <!-- Projects -->
-            <section id="projects">
-                <div class="info-container">
-                    <section class="info">
-                        <h1 class="section-title">Projects</h1>
-                        <h1 class="section-desc">A list of all the stuff I've worked on.</h1>
+                    <section id="clients">
+                        <!-- Clients will load here -->
+                        <noscript>
+                            <p class="error-text">Failed to load clients. Please enable JavaScript</p>
+                        </noscript>
                     </section>
-
-                    <section class="sorting">
-                        <button class="card active">
-                            <p>All</p>
-                        </button>
-
-                        <button class="card">
-                            <p>Games</p>
-                        </button>
-
-                        <button class="card">
-                            <p>Websites</p>
-                        </button>
-
-                        <button class="card">
-                            <p>Mods</p>
-                        </button>
-                    </section>
-                </div>
-
-                <div class="project-container">
                 </div>
             </section>
         </main>
 
-        <script src="/scripts/script.js"></script>
+        <footer>
+            <hr class="section-split">
 
+            <div class="container">
+                <p>Made with <i class="far fa-heart"></i> by Kaden &bullet; Inspired by <a href="https://isabelroses.com/" target="_blank">Isabel</a></p>
+
+                <section class="links">
+                    <a href="https://store.steampowered.com/dev/Kaden"><i class="fab fa-steam"></i></a>
+                    <a href="https://kadenissilly.itch.io/"><i class="fab fa-itch-io"></i></a>
+                    <a href="https://github.com/KadenIsSilly"><i class="fab fa-github"></i></a>
+                </section>
+            </div>
+        </footer>
+
+        <!------------------------------------------------>
         <script>
             window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
         </script>
@@ -153,5 +165,7 @@
             window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
         </script>
         <script defer src="/_vercel/speed-insights/script.js"></script>
+
+        <script src="/scripts/script.js"></script>
     </body>
 </html>

@@ -1,0 +1,134 @@
+[
+    {
+        "url": "https://soapmug.itch.io/I_SEE_YOU",
+        "icon": "/assets/images/projects/i_see_you.png",
+        "name": "I SEE YOU",
+        "desc": "A game made in 2 days for the D&A Game Jam 2026",
+        "info": [
+            {
+                "class": "unity", 
+                "label": "Unity"
+            },
+            {
+                "class": "cs", 
+                "label": "C#"
+            }
+        ]
+    },
+    {
+        "url": "https://kadenissilly.com/",
+        "icon": "https://api.lanyard.rest/765183514001408020.png",
+        "name": "kadenissilly.com",
+        "desc": "My own wee landing page.",
+        "info": [
+            {
+                "class": "html", 
+                "label": "HTML"
+            },
+            {
+                "class": "css", 
+                "label": "CSS"
+            }
+        ]
+    },
+    {
+        "url": "https://github.com/KadenIsSilly/M-Day",
+        "icon": "/assets/images/projects/m-day.png",
+        "name": "M-Day",
+        "desc": "Scripts to remove the mutants in Exo Zombies",
+        "info": [
+            {
+                "class": "gsc", 
+                "label": "GSC"
+            }
+        ]
+    },
+    {
+        "url": "https://kaden-the.dev/",
+        "icon": "/assets/images/me.png",
+        "name": "kaden-the.dev",
+        "desc": "My personal website/portfolio",
+        "info": [
+            {
+                "class": "html", 
+                "label": "HTML"
+            },
+            {
+                "class": "css", 
+                "label": "CSS"
+            },
+            {
+                "class": "js", 
+                "label": "JS"
+            }
+        ]
+    },
+    {
+        "url": "https://archivesmp.net/",
+        "icon": "/assets/images/projects/archivesmp.png",
+        "name": "archivesmp.net",
+        "desc": "The official website for the ArchiveSMP",
+        "info": [
+            {
+                "class": "html", 
+                "label": "HTML"
+            },
+            {
+                "class": "css", 
+                "label": "CSS"
+            },
+            {
+                "class": "js", 
+                "label": "JS"
+            }
+        ]
+    },
+    {
+        "url": "https://www.youtube.com/watch?v=xj8ZapKHgZY&t=1345s",
+        "icon": "/assets/images/projects/ktvu.png",
+        "name": "Keep the Viewers Up!",
+        "desc": "Perform tasks to keep your viewers engaged.",
+        "info": [
+            {
+                "class": "ue", 
+                "label": "Unreal Engine"
+            },
+            {
+                "class": "blueprint", 
+                "label": "Blueprint"
+            }
+        ]
+    },
+    {
+        "url": "https://www.roblox.com/games/13413041261/Coco_Pops",
+        "icon": "/assets/images/projects/coco_pops.png",
+        "name": "Coco Pops",
+        "desc": "It's just Coco Pops.",
+        "info": [
+            {
+                "class": "roblox", 
+                "label": "ROBLOX"
+            },
+            {
+                "class": "lua", 
+                "label": "LUA"
+            }
+        ]
+    },
+    {
+        "url": "https://www.roblox.com/games/12651990651/Explode",
+        "icon": "/assets/images/projects/explode.png",
+        "name": "Explode.",
+        "desc": "It's in the name 🤷‍♂️",
+        "info": [
+            {
+                "class": "roblox", 
+                "label": "ROBLOX"
+            },
+            {
+                "class": "lua", 
+                "label": "LUA"
+            }
+        ]
+    }
+]

@@ -179,7 +179,7 @@ a {
     gap: 12px;
 }
 
-#projects #projects-list .project:last-child:nth-child(odd) {
+#projects #projects-list .last-project:nth-child(odd) {
     grid-column: 1 / -1;
 }
 
@@ -373,15 +373,11 @@ a {
 }
 
 #contact .contact #clients {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
     gap: 12px;
     justify-content: center;
     margin-top: 18px;
-}
-
-#contact .contact #clients .client:last-child:nth-child(odd) {
-    grid-column: 1 / -1;
 }
 
 #contact .contact #clients .client {
@@ -426,8 +422,7 @@ a {
 }
 
 #contact .contact #clients .client .rating {
-    display: flex;
-    align-items: center;
+    text-align: right;
     gap: 3px;
     font-size: 14px;
     transition: all 0.3s ease;

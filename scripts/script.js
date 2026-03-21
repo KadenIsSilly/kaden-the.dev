@@ -94,9 +94,13 @@ function loadProjects() {
                     button.onclick = () => render(!showAll);
                     list.appendChild(button);
                 }
+
+                const cards = document.querySelectorAll('#projects-list .project');
+                cards[cards.length - 1].classList.add('last-project');
             }
 
             render(false);
+
         });
 }
 
@@ -131,8 +135,10 @@ function loadClients() {
                         </section>
 
                         <section class="rating">
-                            ${stars} <span>${client.stars}/5</span>
+                            <span>${stars} ${client.stars}/5<span>
+                            <p>"${client.qoute}"</p>
                         </section>
+                        
                     </a>
                 `
             }).join('');

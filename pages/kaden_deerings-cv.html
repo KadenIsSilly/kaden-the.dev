@@ -143,12 +143,21 @@
             line-height: 1.2;
         }
 
-        #clients .card .top p {
+        #clients .card .top .stars {
             color: #b89913;
             font-size: 17px;
         }
 
-        #clients .card .top p span {
+        #clients .card .top .rating {
+            text-align: right;
+        }
+
+        #clients .card .top .stars {
+            color: #b89913;
+            font-size: 17px;
+        }
+
+        #clients .card .top .qoute, #clients .card .top p span {
             color: var(--sub-text);
             font-size: 14px;
         }
@@ -190,6 +199,16 @@
             <hr>
 
             <section id="projects">
+                <!-- archivesmp.net -->
+                <a class="card" href="https://jacobstreams.com/" target="_blank">
+                    <section class="top">
+                        <h1>jacobstreams.com</h1>
+                        <p>Freelance Work</p>
+                    </section>
+
+                    <p class="used">VS Code &bullet; HTML &bullet; CSS &bullet; JS &bullet; Github &bullet; Teamworking</p>
+                    <p class="desc">A website I was hired to make for the streamer JacobStreams. It is a landing site that promotes all his social medias</p>
+                </a>
                 <!-- I SEE YOU -->
                 <a class="card" href="https://soapmug.itch.io/I_SEE_YOU" target="_blank">
                     <section class="top">
@@ -229,7 +248,7 @@
                         <p>Freelance Work</p>
                     </section>
 
-                    <p class="used">VS Code &bullet; HTML &bullet; CSS &bullet; Github &bullet; Teamworking</p>
+                    <p class="used">VS Code &bullet; HTML &bullet; CSS &bullet; JS &bullet; Github &bullet; Teamworking</p>
                     <p class="desc">A website I volunteered to make for the ArchiveSMP, where the community can find all the links to the creators main social media in a single place.</p>
                 </a>
 
@@ -241,7 +260,7 @@
                     </section>
 
                     <p class="used">VS Code &bullet; HTML &bullet; CSS</p>
-                    <p class="desc">That's right this very CV you are reading was coded using HTML and CSS. The reason was so I can have more control over the styling and I'm just more familiar with designing websites 😅</p>
+                    <p class="desc">That's right this very CV you are reading was coded using HTML and CSS. The reason was so I can have more control over the styling.</p>
                 </a>
 
                 <!-- kaden-the.dev -->
@@ -259,10 +278,27 @@
             <hr>
 
             <section id="clients">
-                <a class="card" href="https://cosllie.carrd.co/" target="_blank">
+                <a class="card" href="https://jacobstreams.com/" target="_blank">
+                    <section class="top">
+                        <h1>JacobStreams</h1>
+                        
+                        <div class="rating">
+                            <p class="stars">★★★★⯪ <span>4.5/5</span></p>
+                            <p class="qoute">"Cheap and did a good job."</p>
+                        </div>
+                    </section>
+
+                    <p class="project">jacobstreams.com</p>
+                </a>
+
+                <a class="card" href="https://cosllie.carrd.co" target="_blank">
                     <section class="top">
                         <h1>cosllie</h1>
-                        <p>★★★★★ <span>5/5</span></p>
+                        
+                        <div class="rating">
+                            <p class="stars">★★★★★ <span>5/5</span></p>
+                            <p class="qoute">"Did exactly what I needed."</p>
+                        </div>
                     </section>
 
                     <p class="project">archivesmp.net</p>

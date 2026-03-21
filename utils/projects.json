@@ -1,5 +1,25 @@
 [
     {
+        "url": "https://jacobstreams.com/",
+        "icon": "https://jacobstreams.com/assets/images/favicon.png",
+        "name": "jacobstreams.com",
+        "desc": "JacobStreams' official website.",
+        "info": [
+            {
+                "class": "html", 
+                "label": "HTML"
+            },
+            {
+                "class": "css", 
+                "label": "CSS"
+            },
+            {
+                "class": "js", 
+                "label": "JS"
+            }
+        ]
+    },
+    {
         "url": "https://soapmug.itch.io/I_SEE_YOU",
         "icon": "/assets/images/projects/i_see_you.png",
         "name": "I SEE YOU",

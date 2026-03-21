@@ -1,9 +1,18 @@
 [
     {
+        "url": "https://jacobstreams.com/",
+        "icon": "/assets/images/clients/JacobStreams.png",
+        "name": "JacobStreams",
+        "project": "jacobstreams.com",
+        "stars": "5",
+        "qoute": "Very easy to work with, would recommend!"
+    },
+    {
         "url": "https://cosllie.carrd.co/",
         "icon": "/assets/images/clients/cosllie.png",
         "name": "cosllie",
         "project": "archivesmp.net",
-        "stars": "5"
+        "stars": "5",
+        "qoute": "Did exactly what I needed."
     }
 ]

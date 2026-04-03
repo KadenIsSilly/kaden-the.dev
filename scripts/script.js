@@ -1,5 +1,6 @@
 function connectLanyard() {
     const lanyard = new WebSocket('wss://api.lanyard.rest/socket');
+    let heartbeatInterval;
 
     lanyard.addEventListener('open', () => {
         lanyard.send(JSON.stringify({
@@ -12,8 +13,8 @@ function connectLanyard() {
         const { op, d } = JSON.parse(event.data);
 
         if (op === 1) {
-            setInterval(() => lanyard.send(JSON.stringify({ op: 6 })), d.heartbeat_interval);
-            // Someone's Daughter:
+            heartbeatInterval = setInterval(() => lanyard.send(JSON.stringify({ op: 6 })), d.heartbeat_interval);
+            // POV: Someone's Daughter
         }
 
         if (op === 0) {
@@ -40,6 +41,16 @@ function connectLanyard() {
                 offline: 'Response time: ~6hrs'
             }[status] ?? 'Response time: NaN';
         }
+    });
+
+    lanyard.addEventListener('close', () => {
+        clearInterval(heartbeatInterval);
+        setTimeout(() => connectLanyard(), 5000);
+    });
+
+    lanyard.addEventListener('error', () => {
+        clearInterval(heartbeatInterval);
+        lanyard.close();
     });
 }
 
@@ -135,8 +146,8 @@ function loadClients() {
                         </section>
 
                         <section class="rating">
-                            <span>${stars} ${client.stars}/5<span>
-                            <p>"${client.qoute}"</p>
+                            <span>${stars} ${client.stars}/5</span>
+                            <p>"${client.quote}"</p>
                         </section>
                         
                     </a>

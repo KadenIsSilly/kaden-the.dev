@@ -437,7 +437,7 @@ a {
     color: #f5c51869;
 }
 
-#contact .contact #clients .client .rating span {
+#contact .contact #clients .client .rating span, #contact .contact #clients .client .rating p {
     font-weight: 400;
     font-size: 13px;
     color: var(--sub-text);

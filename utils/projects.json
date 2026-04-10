@@ -1,7 +1,7 @@
 [
     {
         "url": "https://jacobstreams.com/",
-        "icon": "https://jacobstreams.com/assets/images/favicon.png",
+        "icon": "/assets/images/projects/jacobstreams.png",
         "name": "jacobstreams.com",
         "desc": "A custom bio page for the streamer JacobStreams.",
         "info": [
@@ -37,7 +37,7 @@
     },
     {
         "url": "https://kadenissilly.com/",
-        "icon": "https://api.lanyard.rest/765183514001408020.png",
+        "icon": "/assets/images/me.png",
         "name": "kadenissilly.com",
         "desc": "My personal bio page.",
         "info": [

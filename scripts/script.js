@@ -64,7 +64,7 @@ function getFavGame() {
         })
         .catch(() => {
             document.getElementById('fav-game-title').textContent = 'ERROR';
-            document.getElementById('fav-game-title').href = 'https://store.steampowered.com';
+            document.getElementById('fav-game-title').href = 'https://store.steampowered.com/';
             document.getElementById('fav-game-pt').textContent = 'NaN';
         });
 }
@@ -87,7 +87,7 @@ function loadProjects() {
                     return `
                         <a class="project card" href="${project.url}" target="_blank">
                             <section class="content">
-                                <img src="${project.icon}" alt="${project.name}'s Icon">
+                                <img src="${project.icon}" alt="${project.name}'s Icon" loading="lazy">
                                 <section class="details">
                                     <h1 class="name">${project.name}</h1>
                                     <p class="desc">${project.desc}</p>
@@ -137,7 +137,7 @@ function loadClients() {
                 return `
                     <a class="client card" href="${client.url}" target="_blank">
                         <section class="details">
-                            <img src="${client.icon}" alt="${client.name}'s Icon">
+                            <img src="${client.icon}" alt="${client.name}'s Icon" loading="lazy">
 
                             <section class="info">
                                 <h1 class="name">${client.name}</h1>

@@ -6,13 +6,13 @@
         <meta name="color-scheme" content="dark">
 
         <title>Kaden's Portfolio</title>
-        <meta name="description" content="Game and Web Developer based in Scotland with a strong knowledge of computers, gameplay programming and quality assurance.">
+        <meta name="description" content="Programmer and Streamer based in Scotland with a strong knowledge of computers, gameplay programming and quality assurance who is passionate about applying his technical skills and gaming knowledge to create exceptional experiences for players.">
         <link rel="canonical" href="https://kaden-the.dev/">
         <link rel="icon" type="image/png" href="/assets/images/me.png">
 
         <meta property="og:type" content="website">
         <meta property="og:title" content="Kaden's Portfolio">
-        <meta property="og:description" content="Game and Web Developer based in Scotland with a strong knowledge of computers, gameplay programming and quality assurance.">
+        <meta property="og:description" content="Programmer and Streamer based in Scotland with a strong knowledge of computers, gameplay programming and quality assurance.">
         <meta property="og:url" content="https://kaden-the.dev/">
         <meta property="og:image" content="https://kaden-the.dev/assets/images/me.png">
         <meta property="theme-color" content="#ff0000">
@@ -20,7 +20,7 @@
 
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="Kaden's Portfolio">
-        <meta name="twitter:description" content="Game and Web Developer based in Scotland with a strong knowledge of computers, gameplay programming and quality assurance.">
+        <meta name="twitter:description" content="Programmer and Streamer based in Scotland with a strong knowledge of computers, gameplay programming and quality assurance.">
         <meta name="twitter:url" content="https://kaden-the.dev/">
         <meta name="twitter:image" content="https://kaden-the.dev/assets/images/me.png">
 
@@ -30,6 +30,7 @@
                 "@type": "Person",
                 "name": "Kaden (KadenIsSilly)",
                 "url": "https://kaden-the.dev/",
+                "email": "message.kaden@gmail.com",
                 "jobTitle": "Programmer and Streamer",
                 "description": "Programmer and Streamer based in Scotland with a strong knowledge of computers, gameplay programming and quality assurance who is passionate about applying his technical skills and gaming knowledge to create exceptional experiences for players.",
                 "address": {
@@ -49,6 +50,44 @@
                     "https://kadenissilly.itch.io/",
                     "https://github.com/KadenIsSilly",
                     "https://kadenissilly.com/"
+                ],
+                "hasCreatedWork": [
+                    {
+                        "@type": "SoftwareApplication",
+                        "name": "jacobstreams.com",
+                        "url": "https://jacobstreams.com/",
+                        "applicationCategory": "WebApplication"
+                    },
+                    {
+                        "@type": "SoftwareApplication",
+                        "name": "I SEE YOU",
+                        "url": "https://soapmug.itch.io/I_SEE_YOU",
+                        "applicationCategory": "GameApplication"
+                    },
+                    {
+                        "@type": "SoftwareApplication",
+                        "name": "kadenissilly.com",
+                        "url": "https://kadenissilly.com/",
+                        "applicationCategory": "WebApplication"
+                    },
+                    {
+                        "@type": "SoftwareApplication",
+                        "name": "M-Day",
+                        "url": "https://github.com/KadenIsSilly/M-Day",
+                        "applicationCategory": "GameApplication"
+                    },
+                    {
+                        "@type": "SoftwareApplication",
+                        "name": "kaden-the.dev",
+                        "url": "https://kaden-the.dev/",
+                        "applicationCategory": "WebApplication"
+                    },
+                    {
+                        "@type": "SoftwareApplication",
+                        "name": "archivesmp.net",
+                        "url": "https://archivesmp.net/",
+                        "applicationCategory": "WebApplication"
+                    }
                 ]
             }
         </script>
@@ -56,95 +95,106 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 
-        <link rel="stylesheet" href="/styles/style.css">
+        <link rel="stylesheet" href="/styles/main.css">
+        <link rel="stylesheet" href="/styles/home.css">
     </head>
 
     <body>
-        <main>
-            <section id="profile">
-                <section class="profile">
-                    <img src="/assets/images/me.png" alt="Kaden's profile picture">
+        <header>
+            <section class="profile">
+                <img class="picture" src="/assets/images/me.png" alt="Profile Picture" loading="lazy" decoding="async">
+                <div class="container">
+                    <h1 class="name">Kaden</h1>
 
-                    <section class="content">
-                        <h1 class="name">Kaden</h1>
-
-                        <section class="status">
-                            <div id="status-dot" class="dot"></div>
-                            <p id="status-text" class="text">Loading...</p>
-                        </section>
+                    <section class="status">
+                        <div class="dot" id="status-dot" style="display: none;"></div>
+                        <p class="text" id="status-text" style="display: none;"></p>
                     </section>
-                </section>
+                </div>
+            </section>
 
-                <div class="bio card">
-                    <p>I'm a Game Developer based in Scotland with a passion for creating exceptional experiences for the players, I also dabble in Web Development from time to time and love the minimalistic style. Through this journey, I took interest in computers and have even built a few desktops!</p>
+            <nav>
+                <a href="/" style="color: var(--text);">Home</a>
+                <a href="/now">/Now</a>
+                <a href="/uses">/Uses</a>
+            </nav>
+        </header>
+
+        <main>
+            <section id="about">
+                <div class="card">
+                    <p>I'm a Programmer and Streamer based in Scotland. My main focus is Game Development and I enjoy creating exceptional experiences for players, I also dabble in Web Development from time to time.</p>
                     <br>
-                    <p>Whenever I'm not busy, I usually find myself playing video games, especially sandbox and horror games. My favourite game is currently <a id="fav-game-title" href="" target="_blank">loading...</a>, and I have <span id="fav-game-pt">loading...</span> hours of playtime.</p>
+                    <p>Whenever I'm not busy, you will find me playing video games, especially psychological horror games. <span id="favourite-game"></span></p>
                 </div>
 
                 <div class="work card">
-                    <i class="fas fa-circle-info icon"></i>
-                    <p class="text">I'm currently open for work. Get in touch <a class="link" href="#contact">here</a></p>
+                    <div class="container">
+                        <div class="dot"></div>
+
+                        <p>I'm currently open for freelance and collaboration opportunities. Get in touch <a href="#contact">here</a>.</p>
+                    </div>
                 </div>
             </section>
 
-            <hr class="section-split">
+            <hr>
 
             <section id="projects">
                 <h1 class="section-title">Projects</h1>
-                <p class="section-desc">Here is a list of projects I've worked on.</p>
+                <p class="section-desc">Here is a list of all the projects I've worked on.</p>
 
-                <section id="projects-list">
-                    <!-- Projects will load here -->
+                <section class="projects" id="project-list">
+                    <p class="error-text" id="project-error" style="display: none;"></p>
                     <noscript>
-                        <p class="error-text">Failed to load projects. Please enable JavaScript</p>
+                        <p class="error-text">Couldn't load projects due to JavaScript being disabled.</p>
                     </noscript>
+
+                    <!-- Projects will load here -->
                 </section>
+
+                <button class="show-more" id="projects-show-more" style="display: none;">Show More</button>
             </section>
 
-            <hr class="section-split">
+            <hr>
 
             <section id="contact">
-                <div class="contact card">
+                <div class="card">
                     <h1 class="title">Contact Me</h1>
-                    <p class="subtitle">Have a project in mind? Let's have a chat about it</p>
-                    <p id="response-time">
-                        <noscript class="error-text">Couldn't get response time. Please enable JavaScript</noscript>
-                        Response time: Loading...
-                    </p>
+                    <p class="desc">Have a project in mind? Let's have a chat about it!</p>
 
-                    <section class="links">
-                        <a class="discord" href="https://discord.com/users/765183514001408020" target="_blank"><i class="fab fa-discord"></i> @KadenIsSilly</a>
-                        <a class="email" href="mailto:message.kaden@gmail.com" target="_blank"><i class="far fa-envelope"></i> message.kaden@gmail.com</a>
+                    <section class="methods">
+                        <a class="discord" href="https://discord.com/users/765183514001408020" target="_blank" rel="noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/>
+                            </svg>
+                            <p>@KadenIsSilly</p>
+                        </a>
+
+                        <a class="email" href="mailto:message.kaden@gmail.com" target="_blank" rel="noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M3 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm0 1.5h10a.5.5 0 0 1 .5.5v.643L8 9.357 2.5 5.643V5a.5.5 0 0 1 .5-.5zM2.5 7.5l4.9 2.94a1.5 1.5 0 0 0 1.2 0L13.5 7.5V11a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5z"/>
+                            </svg>
+                            <p>message.kaden@gmail.com</p>
+                        </a>
                     </section>
-                    
-                    <hr class="section-split">
 
-                    <section id="clients">
-                        <!-- Clients will load here -->
+                    <div class="container">
+                        <p id="response-time"></p>
+                        <p class="average-rating" id="average-rating"></p>
+                    </div>
+
+                    <hr>
+
+                    <section id="client-list">
+                        <p class="error-text" id="client-error" style="display: none;"></p>
                         <noscript>
-                            <p class="error-text">Failed to load clients. Please enable JavaScript</p>
+                            <p class="error-text">Couldn't load clients due to JavaScript being disabled.</p>
                         </noscript>
                     </section>
                 </div>
             </section>
         </main>
-
-        <footer>
-            <hr class="section-split">
-
-            <div class="container">
-                <p>Made with <i class="far fa-heart"></i> by Kaden &bullet; Inspired by <a href="https://isabelroses.com/" target="_blank">Isabel</a></p>
-
-                <section class="links">
-                    <a href="https://store.steampowered.com/dev/Kaden" target="_blank"><i class="fab fa-steam"></i></a>
-                    <a href="https://kadenissilly.itch.io/" target="_blank"><i class="fab fa-itch-io"></i></a>
-                    <a href="https://github.com/KadenIsSilly" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://kadenissilly.com/" target="_blank"><i class="fas fa-link"></i></a>
-                </section>
-            </div>
-        </footer>
 
         <!------------------------------------------------>
         <script>
@@ -157,6 +207,7 @@
         </script>
         <script defer src="/_vercel/speed-insights/script.js"></script>
 
-        <script src="/scripts/script.js"></script>
+        <script src="/scripts/main.js"></script>
+        <script src="/scripts/home.js"></script>
     </body>
 </html>

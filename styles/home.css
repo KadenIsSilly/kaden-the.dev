@@ -1,0 +1,432 @@
+button {
+    padding: 0;
+    background: none;
+    color: var(--text);
+    border: none;
+    border-radius: none;
+    cursor: pointer;
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#about .card {
+    border-color: var(--accent-dimmed);
+    margin-bottom: 18px;
+}
+
+#about .card p {
+    font-size: 16.5px;
+    line-height: 1.4;
+}
+
+#about .work {
+    padding: 12px 12px 12px 18px;
+    width: fit-content;
+    border: none;
+    margin: 0;
+}
+
+#about .work .container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#about .work .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #45a366;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse { 
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.25); opacity: 0.75; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+#about .work p {
+    font-size: 15px;
+    color: var(--sub-text);
+    user-select: none;
+}
+
+#about .work p a { text-decoration: underline; }
+#about .work p a:hover { color: var(--text); }
+
+#projects .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(388px, 1fr));
+    gap: 12px;
+}
+
+#projects .project { position: relative; border-radius: 8px; filter: saturate(0); transition: filter 0.3s ease; }
+#projects .project:hover { filter: saturate(1); text-decoration: none;}
+
+#projects .projects .project:last-child:nth-child(odd) { grid-column: 1 / -1; }
+
+.project.card .external-link-icon {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 18px;
+    height: 18px;
+    opacity: 0.5;
+    transition: opacity 0.2s ease;
+}
+
+.project.card:hover .external-link-icon {
+    opacity: 1;
+}
+
+#projects .project:hover #projects .project svg { opacity: 1; }
+
+#projects .projects .project .info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+#projects .project .info .icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 8px;
+    object-fit: cover;
+    user-select: none;
+}
+
+#projects .project .info .tech {
+    display: flex;
+    gap: 6px;
+    user-select: none;
+}
+
+#projects .project .info .tech .card {
+    padding: 4px 8px;
+    border-radius: 6px;
+    background-color: var(--card-bg2);
+    border: none;
+    border-radius: 4px;
+}
+
+#projects .project .info .tech .card p {
+    font-size: 12px;
+}
+
+.roblox { color: #e5e5e6; }
+.lua { color: #000080; }
+.unreal { color: #f5f5f5; }
+.blueprint { color: #00c0ff; }
+.vs-code { color: #3c99d4; }
+.html { color: #e54d26; }
+.css { color: #3d8fc6; }
+.js { color: #f0db4f; }
+.gsc { color: #ff9811; }
+.unity { color: #f5f5f5; }
+.visual-studio { color: #52218a; }
+.cs { color: #68217a; }
+
+
+#projects .project .info .name {
+    font-size: 19px;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+#projects .project .desc {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--sub-text);
+    user-select: none;
+}
+
+#projects .show-more {
+    padding: 10px 20px;
+    margin-top: 12px;
+    width: 100%;
+    background-color: var(--card-bg);
+    border-radius: 6px;
+    color: var(--sub-text);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#projects .show-more:hover {
+    background-color: var(--card-border);
+    color: var(--text);
+}
+
+#contact {
+    padding: 0 145px;
+}
+
+#contact .card {
+    text-align: center;
+    background-color: var(--card-bg2);
+}
+
+#contact .card h1 {
+    font-size: 26px;
+    user-select: none;
+}
+
+#contact .card .desc {
+    font-size: 15px;
+    margin-bottom: 12px;
+    user-select: none;
+}
+
+#contact .card .methods {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 12px;
+}
+
+#contact .card .discord, #contact .card .email {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    background-color: var(--card-bg);
+    border-radius: 6px;
+    font-weight: 400;
+    color: var(--text);
+    transition: all 0.2s ease;
+}
+
+#contact .card .discord:hover {
+    background-color: #5865f2;
+    color: var(--text);
+    text-decoration: none;
+}
+
+#contact .card .email:hover {
+    background-color: #ea4335;
+    color: var(--text);
+    text-decoration: none;
+}
+
+#contact .card .discord svg, #contact .card .email svg {
+    width: 22px;
+    height: 22px;
+    fill: var(--sub-text);
+    transition: all 0.2s ease;
+}
+
+#contact .card .discord:hover svg {
+    fill: var(--text);
+}
+
+#contact .card .email:hover svg {
+    fill: var(--text);
+}
+
+#contact .card .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+}
+
+#contact .card .container p {
+    font-size: 15px;
+    color: var(--sub-text);
+}
+
+#contact .card hr {
+    margin: 14px 0;
+}
+
+#contact .card #client-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+#contact .card #client-list .client {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    border: 1px solid var(--card-bg);
+    text-align: left;
+    text-decoration: none;
+    transition: border 0.2s ease;
+}
+
+#contact .card #client-list .client:hover { border-color: var(--card-border); }
+
+#contact .card #client-list .client .container {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+#contact .card #client-list .client .pfp {
+    width: 52px;
+    height: 52px;
+    border-radius: 8px;
+    object-fit: cover;
+    user-select: none;
+}
+
+#contact .card #client-list .client .info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    user-select: all;
+}
+
+#contact .card #client-list .client .info .name {
+    font-size: 19px;
+    font-weight: 500;
+    user-select: all;
+}
+
+#contact .card #client-list .client .info .project {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--sub-text);
+}
+
+#contact .card #client-list .client .rating {
+    text-align: right;
+    gap: 6px;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--sub-text);
+    user-select: none;
+}
+
+.full-star, .half-star, .empty-star {
+    width: 14px;
+    height: 14px;
+    fill: #ebbf2e;
+}
+
+@media (max-width: 600px) {
+    #about .card p {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    #about .work {
+        display: none;
+    }
+
+    #projects .projects {
+        gap: 14px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    #projects .project {
+        filter: saturate(1);
+    }
+
+    #projects .project .external-link-icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    #projects .project .info .icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 6px;
+    }
+
+    #projects .project .info .name {
+        font-size: 16px;
+    }
+    
+    #projects .project .info .tech .card p {
+        font-size: 10px;
+    }
+
+    #projects .project .desc {
+        font-size: 13px;
+    }
+
+    #projects .show-more {
+        font-size: 14px;
+    }
+
+    #contact {
+        padding: 0 25px;
+    }
+
+    #contact .card h1 {
+        font-size: 22px;
+    }
+
+    #contact .card .desc {
+        font-size: 11px;
+    }
+
+    #contact .card .methods {
+        display: flex;
+        flex-direction: column;
+        max-width: fit-content;
+        margin: 0 auto;
+        gap: 10px;
+        margin-bottom: 12px;
+    }
+
+    #contact .card .discord, #contact .card .email {
+        justify-content: center;
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+
+    #contact .card .discord svg, #contact .card .email svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    #contact .card .container {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    #contact .card .container p {
+        font-size: 13px;
+    }
+
+    #contact .card #client-list .client {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #contact .card #client-list .client .pfp {
+        width: 46px;
+        height: 46px;
+        border-radius: 4px;
+    }
+
+    #contact .card #client-list .client .info .name {
+        font-size: 16px;
+    }
+
+    #contact .card #client-list .client .info .project {
+        font-size: 12px;
+    }
+
+    #contact .card #client-list .client .rating {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .full-star, .half-star, .empty-star {
+        width: 11px;
+        height: 11px;
+    }
+}

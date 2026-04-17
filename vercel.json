@@ -5,6 +5,14 @@
     {
       "source": "/",
       "destination": "/pages/home.html"
+    },
+    {
+      "source": "/now",
+      "destination": "/pages/now.html"
+    },
+    {
+      "source": "/uses",
+      "destination": "/pages/uses.html"
     }
   ]
 }

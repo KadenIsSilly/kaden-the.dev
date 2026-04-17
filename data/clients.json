@@ -1,18 +1,18 @@
 [
     {
         "url": "https://jacobstreams.com/",
-        "icon": "/assets/images/clients/JacobStreams.png",
+        "image": "/assets/images/clients/JacobStreams.png",
         "name": "JacobStreams",
         "project": "jacobstreams.com",
-        "stars": "5",
+        "rating": "5",
         "quote": "Very easy to work with!"
     },
     {
         "url": "https://cosllie.carrd.co/",
-        "icon": "/assets/images/clients/cosllie.png",
+        "image": "/assets/images/clients/cosllie.png",
         "name": "cosllie",
         "project": "archivesmp.net",
-        "stars": "5",
+        "rating": "5",
         "quote": "Did exactly what I needed."
     }
 ]

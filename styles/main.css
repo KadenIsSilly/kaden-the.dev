@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #1a1a1a;
+    --text: #e8e8e8;
+    --sub-text: #888888;
+    --card-bg: #242424;
+    --card-bg2: #1f1f1f;
+    --card-border: #3b3b3b;
+    --accent: #ff0000;
+    --accent-dimmed: #ff00009f;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: var(--bg);
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 500;
+    color: var(--text);
+}
+
+::selection { background-color: var(--accent); color: var(--bg); }
+
+body {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 48px 0;
+    min-height: 100vh;
+}
+
+a { color: inherit; text-decoration: none; } 
+a:hover { text-decoration: underline; }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+header .profile {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+header .profile .picture {
+    width: 72px;
+    height: 72px;
+    border-radius: 12px;
+    user-select: none;
+}
+
+header .profile .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+header .profile .name {
+    font-size: 26px;
+    cursor: default;
+}
+
+header .profile .status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    user-select: none;
+}
+
+header .profile .status .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+header .profile .status .text {
+    font-size: 15px;
+    color: var(--sub-text);
+}
+
+header nav {
+    display: flex;
+    gap: 16px;
+    user-select: none;
+}
+
+header nav a {
+    font-size: 17px;
+    color: var(--sub-text);
+    text-decoration-color: var(--text);
+    text-decoration-thickness: 4px;
+    font-weight: 400;
+} 
+
+header nav a:hover { color: var(--text); }
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.card {
+    padding: 16px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+}
+
+hr {
+    height: 2.5px;
+    background-color: var(--card-border);
+    border: none;
+    border-radius: 12px;
+}
+
+.section-title {
+    font-size: 30px;
+    margin-bottom: 4px;
+    user-select: none;
+}
+
+.section-desc {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--sub-text);
+    margin-bottom: 16px;
+    user-select: none;
+}
+
+.error-text {
+    font-size: 17px;
+    font-weight: 700;
+    color: #ff9811;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 36px 24px;
+    }
+
+    header {
+        align-items: start;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    header .profile .picture {
+        width: 60px;
+        height: 60px;
+        border-radius: 6px;
+    }
+
+    header .profile .name {
+        font-size: 22px;
+    }
+
+    header .profile .status .dot {
+        width: 6px;
+        height: 6px;
+    }
+
+    header .profile .status .text {
+        font-size: 12px;
+    }
+
+    header nav {
+        gap: 22px;
+    }
+
+    header nav a {
+        font-size: 15px;
+    } 
+
+    main {
+        gap: 38px;
+    }
+
+    .card {
+        padding: 14px;
+        border-radius: 10px;
+    }
+
+    hr {
+        height: 3px;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
+
+    .section-desc {
+        font-size: 13px;
+    }
+
+    .error-text {
+        font-size: 15px;
+    }
+}

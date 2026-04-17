@@ -3,19 +3,23 @@
         "url": "https://jacobstreams.com/",
         "icon": "/assets/images/projects/jacobstreams.png",
         "name": "jacobstreams.com",
-        "desc": "A custom bio page for the streamer JacobStreams.",
-        "info": [
+        "desc": "The official website for JacobStreams, showcasing his socials, events and more.",
+        "tech": [
+            {
+                "class": "vs-code", 
+                "name": "VS Code"
+            },
             {
                 "class": "html", 
-                "label": "HTML"
+                "name": "HTML"
             },
             {
                 "class": "css", 
-                "label": "CSS"
+                "name": "CSS"
             },
             {
                 "class": "js", 
-                "label": "JS"
+                "name": "JS"
             }
         ]
     },
@@ -23,15 +27,19 @@
         "url": "https://soapmug.itch.io/I_SEE_YOU",
         "icon": "/assets/images/projects/i_see_you.png",
         "name": "I SEE YOU",
-        "desc": "A game made in 2 days for the D&A Game Jam.",
-        "info": [
+        "desc": "A game built in ~2 days by me and three other people for the D&A Game Jam and won Most Promising.",
+        "tech": [
             {
                 "class": "unity", 
-                "label": "Unity"
+                "name": "Unity"
+            },
+            {
+                "class": "visual-studio", 
+                "name": "Visual Studio"
             },
             {
                 "class": "cs", 
-                "label": "C#"
+                "name": "C#"
             }
         ]
     },
@@ -39,15 +47,19 @@
         "url": "https://kadenissilly.com/",
         "icon": "/assets/images/me.png",
         "name": "kadenissilly.com",
-        "desc": "My personal bio page.",
-        "info": [
+        "desc": "My personal bio site, showcasing my social media.",
+        "tech": [
+            {
+                "class": "vs-code", 
+                "name": "VS Code"
+            },
             {
                 "class": "html", 
-                "label": "HTML"
+                "name": "HTML"
             },
             {
                 "class": "css", 
-                "label": "CSS"
+                "name": "CSS"
             }
         ]
     },
@@ -55,11 +67,15 @@
         "url": "https://github.com/KadenIsSilly/M-Day",
         "icon": "/assets/images/projects/m-day.png",
         "name": "M-Day",
-        "desc": "A mod to remove the mutants in Advanced Warfare's zombies mode.",
-        "info": [
+        "desc": "A mod for the game Advanced Warfare that removes all the mutated zombies",
+        "tech": [
+            {
+                "class": "vs-code", 
+                "name": "VS Code"
+            },
             {
                 "class": "gsc", 
-                "label": "GSC"
+                "name": "GSC"
             }
         ]
     },
@@ -67,19 +83,23 @@
         "url": "https://kaden-the.dev/",
         "icon": "/assets/images/me.png",
         "name": "kaden-the.dev",
-        "desc": "My personal portfolio.",
-        "info": [
+        "desc": "My personal portfolio site, showcasing all my projects and the technologies I work with.",
+        "tech": [
+            {
+                "class": "vs-code", 
+                "name": "VS Code"
+            },
             {
                 "class": "html", 
-                "label": "HTML"
+                "name": "HTML"
             },
             {
                 "class": "css", 
-                "label": "CSS"
+                "name": "CSS"
             },
             {
                 "class": "js", 
-                "label": "JS"
+                "name": "JS"
             }
         ]
     },
@@ -87,19 +107,23 @@
         "url": "https://archivesmp.net/",
         "icon": "/assets/images/projects/archivesmp.png",
         "name": "archivesmp.net",
-        "desc": "A website for the ArchiveSMP Minecraft server.",
-        "info": [
+        "desc": "The official website for the ArchiveSMP. Showcasing all the members.",
+        "tech": [
+            {
+                "class": "vs-code", 
+                "name": "VS Code"
+            },
             {
                 "class": "html", 
-                "label": "HTML"
+                "name": "HTML"
             },
             {
                 "class": "css", 
-                "label": "CSS"
+                "name": "CSS"
             },
             {
                 "class": "js", 
-                "label": "JS"
+                "name": "JS"
             }
         ]
     },
@@ -107,31 +131,31 @@
         "url": "https://www.youtube.com/watch?v=xj8ZapKHgZY&t=1345s",
         "icon": "/assets/images/projects/ktvu.png",
         "name": "Keep the Viewers Up!",
-        "desc": "A fast paced game made in ~28 hours for JacobStreams' Talent Show.",
-        "info": [
+        "desc": "A fast paced game made in ~28 hours for JacobStreams' Talent Show",
+        "tech": [
             {
-                "class": "ue", 
-                "label": "Unreal Engine"
+                "class": "unreal", 
+                "name": "Unreal Engine"
             },
             {
                 "class": "blueprint", 
-                "label": "Blueprint"
+                "name": "Blueprint"
             }
         ]
     },
     {
         "url": "https://www.roblox.com/games/13413041261/Coco_Pops",
         "icon": "/assets/images/projects/coco_pops.png",
-        "name": "Coco Pops",
-        "desc": "A horror game about a box of Coco Pops.",
-        "info": [
+        "name": "Coco Pops.",
+        "desc": "A horror game about Coco Pops built in ~3 hours.",
+        "tech": [
             {
                 "class": "roblox", 
-                "label": "ROBLOX"
+                "name": "Roblox Studio"
             },
             {
                 "class": "lua", 
-                "label": "LUA"
+                "name": "Lua"
             }
         ]
     },
@@ -139,15 +163,15 @@
         "url": "https://www.roblox.com/games/12651990651/Explode",
         "icon": "/assets/images/projects/explode.png",
         "name": "Explode.",
-        "desc": "A game that does exactly what the name implies.",
-        "info": [
+        "desc": "A game built in ~2 hours that does exactly what the name implies.",
+        "tech": [
             {
                 "class": "roblox", 
-                "label": "ROBLOX"
+                "name": "Roblox Studio"
             },
             {
                 "class": "lua", 
-                "label": "LUA"
+                "name": "Lua"
             }
         ]
     }

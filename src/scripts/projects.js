@@ -10,6 +10,8 @@ const toolColours = {
     "JavaScript": "#f7df1d",
     "Unreal Engine": "#ffffff",
     "Blueprint": "#74c1f5",
+    "Roblox Studio": "#00a0ff",
+    "Lua": "#000080"
 };
 
 try {

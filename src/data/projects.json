@@ -1,0 +1,51 @@
+[
+  {
+    "url": "https://jacobstreams.com/",
+    "icon": "/src/assets/images/projects/jacobstreams.com.webp",
+    "name": "jacobstreams.com",
+    "description": "The official bio website for JacobStreams. It features all his socials, events, and more.",
+    "tools": ["VS Code", "HTML", "CSS", "JavaScript"]
+  },
+  {
+    "url": "https://soapmug.itch.io/I_SEE_YOU",
+    "icon": "/src/assets/images/projects/I_SEE_YOU.webp",
+    "name": "I SEE YOU",
+    "description": "A game made in ~22 hours by me and three other people for the D&A Game Jam that won Most Promising Game award!",
+    "tools": ["Unity", "Visual Studio", "C#"]
+  },
+  {
+    "url": "https://kadenissilly.com",
+    "icon": "/src/assets/images/me.webp",
+    "name": "kadenissilly.com",
+    "description": "My very own bio website featuring my socials.",
+    "tools": ["VS Code", "HTML", "CSS"]
+  },
+  {
+    "url": "https://github.com/KadenIsSilly/M-Day",
+    "icon": "/src/assets/images/projects/M-Day.webp",
+    "name": "M-Day",
+    "description": "A mod for CoD: Advanced Warfare's Exo Zombies game mode that replaces all the special zombies with normal zombies.",
+    "tools": ["VS Code", "GameScript Code"]
+  },
+  {
+    "url": "https://kaden-the.dev/",
+    "icon": "/src/assets/images/me.webp",
+    "name": "kaden-the.dev",
+    "description": "My own portfolio website that lists all my projects, tells you a bit about me, and how to reach me.",
+    "tools": ["VS Code", "HTML", "CSS", "JavaScript"]
+  },
+  {
+    "url": "https://archivesmp.net/",
+    "icon": "/src/assets/images/projects/archivesmp.net.webp",
+    "name": "archivesmp.net",
+    "description": "The official website for the ArchiveSMP Minecraft server. It lists all the members and their main social media link.",
+    "tools": ["VS Code", "HTML", "CSS", "JavaScript"]
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=xj8ZapKHgZY&t=1345s",
+    "icon": "https://placehold.co/256x256/1f1f1f/a1a1a1?text=KtVU",
+    "name": "Keep the Viewers Up!",
+    "description": "A game where you need to keep your viewers by doing various tasks. Made in ~28 hours for the JacobStreams' Talent Show.",
+    "tools": ["Unreal Engine", "Blueprint"]
+  }
+]

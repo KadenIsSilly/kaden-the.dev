@@ -1,0 +1,209 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1000px;
+    min-height: 85vh;
+}
+
+main .card {
+    padding: 16px;
+    background-color: var(--card-bg);
+    border: var(--border) 1px solid;
+    border-radius: 8px;
+    text-align: center;
+}
+
+main .card .section-desc {
+    color: var(--text);
+}
+
+main .card .links {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 14px;
+}
+
+main .card .links .discord, main .card .links .email{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 6px 12px;
+    width: fit-content;
+    background-color: var(--card-bg-hovered);
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+main .card .links .discord svg, main .card .links .email svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--subtext);
+    transition: fill 0.3s ease;
+}
+
+main .card .links .discord p, main .card .links .email p {
+    font-size: 18px;
+    color: var(--subtext);
+    transition: color 0.3s ease;
+}
+
+main .card .links .discord:hover {
+    background-color: #5865f2;
+}
+
+main .card .links .email:hover {
+    background-color: #ea4335;
+}
+
+main .card .links .discord:hover svg, main .card .links .email:hover svg {
+    fill: var(--text);
+}
+
+main .card .links .discord:hover p, main .card .links .email:hover p {
+    color: var(--text);
+}
+
+main .card hr {
+    margin-top: 18px;
+    margin-bottom: 18px;
+    height: 3px;
+    background-color: var(--border);
+    border: none;
+    border-radius: 8px;
+}
+
+main .card .clients {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+main .card .clients .client {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px;
+    background-color: var(--card-bg-hovered);
+    border-radius: 6px;
+    text-align: left;
+    user-select: none;
+}
+
+main .card .clients .client .info .icon {
+    width: 50px;
+    height: auto;
+    border-radius: 8px;
+}
+
+main .card .clients .client .info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+main .card .clients .client .info .name {
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--text);
+}
+
+main .card .clients .client .info .project {
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--subtext);
+}
+
+main .card .clients .client .review {
+    text-align: right;
+}
+
+main .card .clients .client .review .stars {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+main .card .clients .client .review .stars svg {
+    width: 14px;
+    height: 14px;
+    fill: #ffd700;
+}
+
+main .card .clients .client .review .rating {
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--subtext);
+}
+
+main .card .clients .client .review .quote {
+    font-size: 15px;
+    color: var(--subtext);
+}
+
+.card {
+    animation: fadeIn 0.5s backwards;
+}
+
+.card { animation-delay: 0.5s; }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    } 
+    
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1060px) {
+    main {
+        padding: 0 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 24px 16px;
+        min-height: auto;
+    }
+
+    main .card .links {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    main .card .links .discord,
+    main .card .links .email {
+        justify-content: center;
+        width: 100%;
+    }
+
+    main .card .clients .client {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    main .card .clients .client .review {
+        text-align: center;
+    }
+
+    main .card .clients .client .review .stars {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    main .card .clients .client .info .name {
+        font-size: 16px;
+    }
+}

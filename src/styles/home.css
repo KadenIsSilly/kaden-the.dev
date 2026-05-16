@@ -1,0 +1,382 @@
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    margin: 0 auto;
+    padding: 32px 0;
+    max-width: 1000px;
+    width: 100%;
+}
+
+main .profile {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+main .profile .container {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+main .profile .picture {
+    position: relative;
+}
+
+main .profile .picture img {
+    width: 125px;
+    height: auto;
+    border-radius: 8px;
+}
+
+main .profile .status {
+    position: absolute;
+    bottom: -16px;
+    right: 50%;
+    transform: translateX(50%);
+    padding: 4px 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: var(--card-bg-hovered);
+    border: var(--background) 4px solid;
+    border-radius: 6px;
+    user-select: none;
+}
+
+main .profile .status .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+main .profile .status .text {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+main .profile .content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+main .profile .intro {
+    font-size: 30px;
+    letter-spacing: -0.64px;
+    user-select: none;
+}
+
+main .profile .bio {
+    font-weight: 400;
+    font-size: 17px;
+    letter-spacing: -0.32px;
+}
+
+main .profile .socials {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+main .profile .socials .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    background-color: var(--card-bg);
+    border: var(--border) 1px solid;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+main .profile .socials .link:hover {
+    background-color: var(--card-bg-hovered);
+}
+
+main .profile .socials .link svg {
+    width: 18px;
+    height: 18px;
+    fill: var(--subtext);
+    transition: fill 0.3s ease;
+}
+
+main .profile .socials .github:hover {
+    border-color: #f0f6fc;
+}
+
+main .profile .socials .steam:hover {
+    border-color: #c5c3c0;
+}
+
+main .profile .socials .itch:hover {
+    border-color: #ff244a;
+}
+
+main .profile .socials .twitter:hover {
+    border-color: #e7e9ea;
+}
+
+main .profile .socials .twitch:hover {
+    border-color: #a970ff;
+}
+
+main .profile .socials .github:hover svg {
+    fill: #f0f6fc;
+}
+
+main .profile .socials .steam:hover svg {
+    fill: #c5c3c0;
+}
+
+main .profile .socials .itch:hover svg {
+    fill: #ff244a;
+}
+
+main .profile .socials .twitter:hover svg {
+    fill: #e7e9ea;
+}
+
+main .profile .socials .twitch:hover svg {
+    fill: #a970ff;
+}
+
+main .profile .work {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 16px;
+    width: fit-content;
+    background-color: var(--card-bg-hovered);
+    border-radius: 12px;
+    user-select: none;
+}
+
+main .profile .work .dot {
+    width: 8px;
+    height: 8px;
+    background-color: #00b300cc;
+    border-radius: 50%;
+}
+
+main .profile .work p, main .profile .work p a {
+    font-size: 15px;
+    color: var(--subtext);
+    letter-spacing: 0.75px;
+}
+
+main .profile .work p a {
+    text-decoration: underline;
+}
+
+main .profile .work p a:hover {
+    color: var(--text);
+}
+
+main .projects .list {
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(494px, 100%), 1fr));
+    gap: 12px;
+}
+
+main .projects .project {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+    background-color: var(--card-bg);
+    border: var(--border) 1px solid;
+    border-radius: 8px;
+    filter: saturate(0);
+    transition: background-color 0.3s ease, border-color 0.3s ease, filter 0.3s ease ;
+}
+
+main .projects .list .project:hover {
+    background-color: var(--card-bg-hovered);
+    border-color: var(--border-hovered);
+    filter: saturate(1);
+}
+
+main .projects .project:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+}
+
+main .projects .project .content {
+    position: relative;
+    display: flex;
+    gap: 12px;
+}
+
+main .projects .project .icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+main .projects .project .info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2px;
+    gap: 4px;
+}
+
+main .projects .project .info .name {
+    font-size: 17px;
+    color: var(--text);
+}
+
+main .projects .project .info .description {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--subtext);
+    user-select: none;
+}
+
+main .projects .project .content svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 17px;
+    height: 17px;
+    fill: var(--subtext);
+    filter: opacity(0.5);
+    transition: filter 0.3s ease;
+}
+
+main .projects .project:hover .content svg {
+    filter: opacity(1);
+}
+
+main .projects .project .tags {
+    display: flex;
+    gap: 8px;
+    user-select: none;
+}
+
+main .projects .project .tags .tag {
+    padding: 4px 10px;
+    background-color: var(--card-bg-hovered);
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+main .projects .project:hover .tags .tag {
+    background-color: var(--border);
+}
+
+main .projects .project .tags .tag p {
+    font-weight: 400;
+    font-size: 13px;
+}
+
+main .projects .project .tags .players p {
+    font-weight: 500;
+}
+
+.profile,
+.projects {
+    animation: fadeIn 0.5s backwards;
+}
+
+.profile { animation-delay: 0.5s; }
+.projects { animation-delay: 1s; }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    } 
+    
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1060px) {
+    main {
+        padding: 32px 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 24px 16px;
+        gap: 36px;
+    }
+
+    main .profile .intro {
+        font-size: 24px;
+    }
+
+    main .profile .bio {
+        font-size: 15px;
+    }
+
+    main .profile .picture img {
+        width: 90px;
+    }
+
+    main .profile .status {
+        bottom: -14px;
+    }
+
+    main .profile .work {
+        padding: 8px 12px;
+    }
+
+    main .projects .list {
+        grid-template-columns: 1fr;
+    }
+
+    main .projects .project:last-child:nth-child(odd) {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    main .profile .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    main .profile .picture img {
+        width: 80px;
+    }
+
+    main .profile .status {
+        bottom: auto;
+        top: -14px;
+        right: -14px;
+        transform: none;
+    }
+}
+
+@media (hover: hover) {
+    main .projects .list .project:hover {
+        background-color: var(--card-bg-hovered);
+        border-color: var(--border-hovered);
+        filter: saturate(1);
+    }
+
+    main .projects .project:hover .content svg {
+        filter: opacity(1);
+    }
+
+    main .projects .project:hover .tags .tag {
+        background-color: var(--border);
+    }
+}
+
+@media (hover: none) {
+    main .projects .list .project {
+        filter: saturate(1);
+    }
+
+    main .projects .project .content svg {
+        filter: opacity(1);
+    }
+}

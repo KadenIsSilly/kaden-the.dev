@@ -1,0 +1,17 @@
+{
+    "outputDirectory": ".",
+    "rewrites": [
+        {
+            "source": "/",
+            "destination": "/src/pages/home.html"
+        },
+        {
+            "source": "/about",
+            "destination": "/src/pages/about.html"
+        },
+        {
+            "source": "/contact",
+            "destination": "/src/pages/contact.html"
+        }
+    ]
+}

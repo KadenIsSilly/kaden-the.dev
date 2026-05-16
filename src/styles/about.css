@@ -1,0 +1,131 @@
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    margin: 0 auto;
+    padding: 32px 0;
+    max-width: 1000px;
+}
+
+main .about .card {
+    margin-top: 16px;
+    padding: 12px;
+    background-color: var(--card-bg);
+    border: var(--accent-dimmed) 1px solid;
+    border-radius: 8px;
+    font-size: 17.5px;
+    line-height: 1.25;
+}
+
+main .games .list {
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(325px, 100%), 1fr));
+    gap: 12px;
+}
+
+main .games .game {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    background-color: var(--card-bg);
+    border: var(--border) 1px solid;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+main .games .game:hover {
+    background-color: var(--card-bg-hovered);
+    border-color: var(--border-hovered);
+}
+
+main .games .game .details {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+main .games .game img {
+    width: 42px;
+    height: auto;
+    border-radius: 6px;
+}
+
+main .games .game .name {
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--text);
+}
+
+main .games .game svg {
+    width: 19px;
+    height: 19px;
+    fill: var(--subtext);
+    filter: brightness(50%);
+    transition: filter 0.3s ease;
+}
+
+main .games .game:hover svg {
+    filter: brightness(100%);
+}
+
+main .photos .list {
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(175px, 100%), 1fr));
+    gap: 12px;
+}
+
+main .photos img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.about,
+.games,
+.photos {
+    animation: fadeIn 0.5s backwards;
+}
+
+.about { animation-delay: 0.5s; }
+.games { animation-delay: 1s; }
+.photos { animation-delay: 1.5s; }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    } 
+    
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1060px) {
+    main {
+        padding: 32px 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 24px 16px;
+        gap: 36px;
+    }
+
+    main .games .list {
+        grid-template-columns: 1fr;
+    }
+
+    main .photos .list {
+        grid-template-columns: repeat(auto-fill, minmax(min(130px, 100%), 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    main .games .game .name {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,16 @@
+[
+    {
+        "icon": "/src/assets/images/clients/JacobStreams.webp",
+        "name": "JacobStreams",
+        "project": "jacobstreams.com",
+        "rating": 5,
+        "quote": "Very easy to work with!"
+    },
+    {
+        "icon": "/src/assets/images/clients/cosllie.webp",
+        "name": "cosllie",
+        "project": "archivesmp.net",
+        "rating": 5,
+        "quote": "Did exactly what I needed."
+    }
+]
